@@ -15,6 +15,10 @@
         font-family: 'DanaExtraBlack';
         src: url("../font/DanaFaNum-ExtraBlack.ttf");
     }
+    @font-face {
+        font-family: 'Morabba';
+        src: url("../font/DanaFaNum-ExtraBlack.ttf");
+    }
     body{
         font-family: "Dana";
     }

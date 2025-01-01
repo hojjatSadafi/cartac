@@ -9,15 +9,19 @@ module.exports = {
         "padding":"1rem"
       },
       colors:{
+        "primary":"#4CAF50",
+
         "background":"#eeeeee",
         "darkBackground":"#121212",
 
         "surface":{
           "100":"#fafafa",
-          "200":"#f3f3f3",
-          "300":"#cdcdcd",
-          "400":"#a2a2a2",
-          "500":"#c7c7c7",
+          "200":"#f8f8f8",
+          "300":"#f3f3f3",
+          "400":"#e3e3e3",
+          "500":"#cdcdcd",
+          "600":"#a2a2a2",
+          "700":"#767676",
         },
 
         "darksurface":{
@@ -45,6 +49,7 @@ module.exports = {
         "dana":"Dana",
         "danaBold":"DanaBold",
         "danaExtraBlack":"DanaExtraBlack",
+        "morabba":"Morabba",
       }
       
     },
