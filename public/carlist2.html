@@ -59,11 +59,20 @@
                 <div class="w-full flex items-center gap-2 justify-end text-textColor dark:text-darkTextColor">
                     <span>مرتب سازی بر اساس:</span>
                     <!-- drop down -->
-                    <div class="relative flex gap-2 bg-surface-400 shadow dark:bg-darksurface-400 p-2 rounded cursor-pointer">
-                        <span>ارزان ترین</span>
-                        <svg class="w-6 h-6"><use href="#chevron-down-icon"></use></svg>
+                    <div class="relative">
+                        <!-- dropdown result -->
+                        <div class="flex gap-2 bg-surface-400 shadow dark:bg-darksurface-400 p-2 rounded cursor-pointer" id="filterDropdownResult">
+                            <span>ارزان ترین</span>
+                            <svg class="w-6 h-6"><use href="#chevron-down-icon"></use></svg>
+                        </div>
                         <!-- dropdown content -->
-                         <div class="absolute"></div>
+                         <div class="absolute left-0 top-[110%] space-y-1 bg-surface-400 shadow dark:bg-darksurface-400 z-20 rounded-sm py-1 w-max">
+                            <span class="block px-4 text-center w-full cursor-pointer">گران ترین</span>
+                            <div class="w-full h-px bg-surface-600 dark:bg-darksurface-300"></div>
+                            <span class="block px-4 text-center w-full cursor-pointer">ارزان ترین</span>
+                            <div class="w-full h-px bg-surface-600 dark:bg-darksurface-300"></div>
+                            <span class="block px-4 text-center w-full cursor-pointer">جدید ترین</span>
+                         </div>
                     </div>
                 </div>
             </div>
