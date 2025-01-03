@@ -21,6 +21,12 @@
     }
     body{
         font-family: "Dana";
-        
+    }
+}
+
+@layer components{
+    .hide{
+        visibility: hidden;
+        opacity: 0;
     }
 }

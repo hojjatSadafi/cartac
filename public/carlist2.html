@@ -41,36 +41,44 @@
     <div class="mb-24"></div>
 
     <section class="container grid grid-cols-1 md:grid-cols-12">
-        <div class="h-64 w-full h-full hidden md:block col-span-4 lg:col-span-3 pl-4 lg:pl-0 text-textColor dark:text-darkTextColor border-l border-textColor/20 dark:border-darkTextColor/20 pt-2">
+        <div id="filterSection" class="w-full h-full hidden md:block col-span-4 lg:col-span-3 pl-4 lg:pl-0 text-textColor dark:text-darkTextColor border-l border-textColor/20 dark:border-darkTextColor/20 pt-2">
             <div class="flex gap-2">
                 <svg class="w-8 h-8"><use href="#filter-icon"></use></svg>
                 <span>فیلتر ها</span>
             </div>
         </div>
-        <div class="md:col-span-8 md:col-start-5">
+        <div id="searchSection" class="md:col-span-8 md:col-start-5 lg:col-span-9 lg:col-start-4 relative">
+            <!-- toggle filter btn -->
+             <div class="absolute top-3 right-0 flex cursor-pointer bg-gradient-to-br from-surface-200 to-surface-300 dark:from-darksurface-400 dark:to-darksurface-300 text-textColor dark:text-darkTextColor rounded-l-full p-2" id="toggleFilterBtn">
+                <div class="flex gap-1 items-center w-20 overflow-hidden transition-all">
+                    <svg class="w-6 h-6"><use href="#filter-icon"></use></svg>
+                    <span class="select-none text-nowrap">فیلتر ها</span>
+                </div>
+                <svg class="w-6 h-6 rotate-90 transition-transform duration-300"><use href="#chevron-down-icon"></use></svg>
+            </div>
             <!-- search and filter -->
             <div class="space-y-4">
                 <!-- search -->
-                <div class="flex w-full md:w-2/3 shadow dark:shadow-none bg-surface-200 dark:bg-darksurface-400 text-textColor dark:text-darkTextColor mx-auto py-1.5 px-2 rounded">
+                <div class="flex gap-1.5 items-center w-full md:w-2/5 shadow bg-gradient-to-br from-surface-200 to-surface-300 dark:from-darksurface-400 dark:to-darksurface-300 text-textColor dark:text-darkTextColor ms-auto p-2 rounded">
+                    <a href="#"><svg class="w-6 h-6 rotate-90"><use href="#search-icon"></use></svg></a>
                     <input type="text" class="w-full bg-transparent border-none outline-none font-dana" placeholder="دنبال چی میگردی؟">
-                    <a href="#"><svg class="w-6 h-6"><use href="#search-icon"></use></svg></a>
                 </div>
                 <!-- filter -->
                 <div class="w-full flex items-center gap-2 justify-end text-textColor dark:text-darkTextColor">
                     <span>مرتب سازی بر اساس:</span>
                     <!-- drop down -->
-                    <div class="relative">
+                    <div class="relative select-none">
                         <!-- dropdown result -->
-                        <div class="flex gap-2 bg-surface-400 shadow dark:bg-darksurface-400 p-2 rounded cursor-pointer" id="filterDropdownResult">
-                            <span>ارزان ترین</span>
-                            <svg class="w-6 h-6"><use href="#chevron-down-icon"></use></svg>
+                        <div class="flex gap-2 shadow bg-gradient-to-br from-surface-200 to-surface-300 dark:from-darksurface-400 dark:to-darksurface-300 p-2 rounded cursor-pointer" id="filterDropdown">
+                            <span id="filterDropdownResult">ارزان ترین</span>
+                            <svg class="w-6 h-6 transition-transform duration-300"><use href="#chevron-down-icon"></use></svg>
                         </div>
                         <!-- dropdown content -->
-                         <div class="absolute left-0 top-[110%] space-y-1 bg-surface-400 shadow dark:bg-darksurface-400 z-20 rounded-sm py-1 w-max">
+                         <div class="hide absolute left-0 top-[110%] space-y-1 shadow bg-gradient-to-br from-surface-200 to-surface-300 dark:from-darksurface-400 dark:to-darksurface-300 z-20 rounded-sm py-1 w-max transition-all" id="filterDropdownBody">
                             <span class="block px-4 text-center w-full cursor-pointer">گران ترین</span>
-                            <div class="w-full h-px bg-surface-600 dark:bg-darksurface-300"></div>
+                            <div class="w-full h-px bg-surface-400 dark:bg-darksurface-300"></div>
                             <span class="block px-4 text-center w-full cursor-pointer">ارزان ترین</span>
-                            <div class="w-full h-px bg-surface-600 dark:bg-darksurface-300"></div>
+                            <div class="w-full h-px bg-surface-400 dark:bg-darksurface-300"></div>
                             <span class="block px-4 text-center w-full cursor-pointer">جدید ترین</span>
                          </div>
                     </div>
@@ -83,7 +91,7 @@
                 <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full self-stretch overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
                     <!-- image section -->
                     <div class="relative z-10 rounded-3xl overflow-hidden">
-                        <a href="./course-detail.html" class="block">
+                        <a href="cardetail.html" class="block">
                             <img src="images/pride.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
                         </a>
                         <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
@@ -157,7 +165,7 @@
                 <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full self-stretch overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
                     <!-- image section -->
                     <div class="relative z-10 rounded-3xl overflow-hidden">
-                        <a href="./course-detail.html" class="block">
+                        <a href="cardetail.html" class="block">
                             <img src="images/BMW-M8-Competition-1.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
                         </a>
                         <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
@@ -231,7 +239,7 @@
                 <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full self-stretch overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
                     <!-- image section -->
                     <div class="relative z-10 rounded-3xl overflow-hidden">
-                        <a href="./course-detail.html" class="block">
+                        <a href="cardetail.html" class="block">
                             <img src="images/benz.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
                         </a>
                         <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
@@ -306,7 +314,7 @@
                 <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full self-stretch overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
                     <!-- image section -->
                     <div class="relative z-10 rounded-3xl overflow-hidden">
-                        <a href="./course-detail.html" class="block">
+                        <a href="cardetail.html" class="block">
                             <img src="images/testImg.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
                         </a>
                         <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
@@ -380,7 +388,7 @@
                 <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full self-stretch overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
                     <!-- image section -->
                     <div class="relative z-10 rounded-3xl overflow-hidden">
-                        <a href="./course-detail.html" class="block">
+                        <a href="cardetail.html" class="block">
                             <img src="images/benz.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
                         </a>
                         <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
@@ -457,6 +465,6 @@
         </div>
     </section>
 
-
+    <script src="js/carlist.js"></script>
 </body>
 </html>
