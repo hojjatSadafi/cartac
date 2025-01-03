@@ -6,7 +6,7 @@
     <title>cartac</title>
     <link rel="stylesheet" href="style/output.css">
 </head>
-<body class="bg-background dark:bg-darkBackground min-h-full">
+<body class="bg-background dark:bg-darkBackground min-h-full overflow-x-hidden">
     <svg class="hidden">
         <symbol id="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
@@ -40,7 +40,7 @@
     <!-- Empty place for header or title -->
     <div class="mb-24"></div>
 
-    <section class="container grid grid-cols-1 md:grid-cols-12">
+    <section class="container grid grid-cols-1 md:grid-cols-12 relative z-10">
         <div id="filterSection" class="w-full h-full hidden md:block col-span-4 lg:col-span-3 pl-4 lg:pl-0 text-textColor dark:text-darkTextColor border-l border-textColor/20 dark:border-darkTextColor/20 pt-2">
             <div class="flex gap-2">
                 <svg class="w-8 h-8"><use href="#filter-icon"></use></svg>
@@ -49,7 +49,7 @@
         </div>
         <div id="searchSection" class="md:col-span-8 md:col-start-5 lg:col-span-9 lg:col-start-4 relative">
             <!-- toggle filter btn -->
-             <div class="absolute top-3 right-0 flex cursor-pointer bg-gradient-to-br from-surface-200 to-surface-300 dark:from-darksurface-400 dark:to-darksurface-300 text-textColor dark:text-darkTextColor rounded-l-full p-2" id="toggleFilterBtn">
+             <div class="absolute top-10 right-0 flex cursor-pointer bg-gradient-to-br from-surface-200 to-surface-300 dark:from-darksurface-400 dark:to-darksurface-300 text-textColor dark:text-darkTextColor rounded-l-full p-2" id="toggleFilterBtn">
                 <div class="flex gap-1 items-center w-20 overflow-hidden transition-all">
                     <svg class="w-6 h-6"><use href="#filter-icon"></use></svg>
                     <span class="select-none text-nowrap">فیلتر ها</span>
@@ -465,6 +465,9 @@
         </div>
     </section>
 
+    <!-- fade line -->
+    <!-- <div class="absolute top-0 right-0 hidden lg:block w-[800px] h-[400px] bg-gradient-to-bl from-primary/60 via-primary/30 to-transparent blur-xl z-0"></div> -->
+    <!-- <div class="absolute top-1/2 right-0 hidden lg:block w-[800px] h-14 rotate-[5deg] bg-primary/20 blur-xl z-0"></div> -->
     <script src="js/carlist.js"></script>
 </body>
 </html>
