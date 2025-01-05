@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl" class="">
+<html lang="en" dir="rtl" class="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -103,9 +103,43 @@
                         <div class="relative z-10">
                             <!-- course:thumbnail -->
                             <div>
-                                <img src="images/BMW-M8-Competition-1.jpg" class="max-w-full rounded-3xl" alt="..."/>
+                                <img src="images/BMW-M8-Competition-1.jpg" class="max-w-full rounded-3xl" alt="..." id="mainCarImg"/>
                             </div>
                             <!-- end course:thumbnail -->
+                        </div>
+                        <div class="image-gallery-swiper swiper mx-5 py-2">
+                            <div class="swiper-wrapper subImage-wrapper">    
+                                <div class="swiper-slide subImage h-16 w-24 cursor-pointer rounded overflow-hidden border border-surface-300 dark:border-darksurface-400">
+                                    <img src="images/bmw-m8.jpg" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide subImage h-16 w-24 cursor-pointer rounded overflow-hidden border border-surface-300 dark:border-darksurface-400">
+                                    <img src="images/BMW-M8-Competition-1.jpg" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide subImage h-16 w-24 cursor-pointer rounded overflow-hidden border border-surface-300 dark:border-darksurface-400">
+                                    <img src="images/pride.jpg" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide subImage h-16 w-24 cursor-pointer rounded overflow-hidden border border-surface-300 dark:border-darksurface-400">
+                                    <img src="images/testImg.jpg" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide subImage h-16 w-24 cursor-pointer rounded overflow-hidden border border-surface-300 dark:border-darksurface-400">
+                                    <img src="images/benz.jpg" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide subImage h-16 w-24 cursor-pointer rounded overflow-hidden border border-surface-300 dark:border-darksurface-400">
+                                    <img src="images/bmw-m8.jpg" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide subImage h-16 w-24 cursor-pointer rounded overflow-hidden border border-surface-300 dark:border-darksurface-400">
+                                    <img src="images/benz.jpg" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide subImage h-16 w-24 cursor-pointer rounded overflow-hidden border border-surface-300 dark:border-darksurface-400">
+                                    <img src="images/bmw-m8.jpg" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide subImage h-16 w-24 cursor-pointer rounded overflow-hidden border border-surface-300 dark:border-darksurface-400">
+                                    <img src="images/BMW-M8-Competition-1.jpg" class="w-full h-full object-cover">
+                                </div>
+                                <div class="swiper-slide subImage h-16 w-24 cursor-pointer rounded overflow-hidden border border-surface-300 dark:border-darksurface-400">
+                                    <img src="images/pride.jpg" class="w-full h-full object-cover">
+                                </div>
+                            </div>
                         </div>
                         <div class="-mt-12 pt-12 text-textColor dark:text-darkTextColor">
                             <div class="bg-gradient-to-b from-background to-surface-400 dark:from-darkBackground dark:to-darksurface-400 rounded-b-3xl space-y-2 p-5 mx-5">
@@ -614,7 +648,7 @@
                                                 <div class="dropdownContentCaption transition-all">
                                                     <!-- icon and text -->
                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
-                                                       <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                       <div class="text-orange-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
                                                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
                                                        </div>
                                                        <span class="text-sm">سلامت شاسی جلو</span>
@@ -822,7 +856,11 @@
                 </div>
             </div>
             <!-- slider -->
-            <div class="swiper">
+            <div class="mt-6 mb-4 flex gap-1 items-center">
+                <h3 class="text-xl font-morabba font-bold text-textColor dark:text-darkTextColor">خودرو های مشابه</h3>
+                <div class="max-w-full h-px bg-textColor dark:bg-darkTextColor grow"></div>
+            </div>
+            <div class="swiper-same-car swiper">
                 <!-- Additional required wrapper -->
                 <div class="swiper-wrapper">
                     <!-- Slides -->
@@ -1336,7 +1374,7 @@
     </main>
     <script src="js/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.swiper', {
+        const swiper = new Swiper('.swiper-same-car', {
         loop: true,
         spaceBetween:20,
         slidesPerView:'auto',
@@ -1351,6 +1389,12 @@
             prevEl: '.swiper-button-prev',
         },
         
+    });
+
+    const swiper2 = new Swiper('.image-gallery-swiper', {
+        spaceBetween:10,
+        slidesPerView:'auto',
+
     });
     </script>
     <script src="js/car-detail.js"></script>

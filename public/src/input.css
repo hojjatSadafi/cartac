@@ -17,7 +17,7 @@
     }
     @font-face {
         font-family: 'Morabba';
-        src: url("../font/DanaFaNum-ExtraBlack.ttf");
+        src: url("../font/Morabba-Regular.woff");
     }
     body{
         font-family: "Dana";
