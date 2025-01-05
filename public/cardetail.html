@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/output.css">
 </head>
 <body class="bg-background dark:bg-darkBackground min-h-full overflow-x-hidden">
@@ -86,9 +87,12 @@
         <symbol id="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
         </symbol>
-        <svg id="x-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+        <symbol id="x-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-        </svg>
+        </symbol>
+        <symbol id="chevron-down-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </symbol>
     </svg>
     <main class="flex-auto py-5">
         <!-- container -->
@@ -221,7 +225,7 @@
                                  
                                 </div>
                                 <!-- health test -->
-                                <div class="bg-surface-100 dark:bg-darksurface-500 rounded-b-lg pb-4">
+                                <div class="bg-surface-100 dark:bg-darksurface-500 rounded-b-lg pb-4 transition-all">
                                     <header class="flex items-center justify-between py-3 px-6 rounded-t-lg bg-[#686B75] text-darkTextColor">
                                         <div class="">
                                             <span class="font-bold text-lg font-danaBold">کارشناسی سلامت</span>
@@ -333,21 +337,442 @@
                                       <!-- health full detail -->
                                     <div class="flex justify-center items-center gap-2 my-6">
                                         <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
-                                            <div class="text-green-500 bg-green-100 rounded-full flex items-center justify-center p-1">
+                                            <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-1">
                                                 <svg class="w-5 h-5"><use href="#check-icon"></use></svg>
                                             </div>
                                             <span>مورد تایید</span>
                                         </div>
                                         <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
-                                            <div class="text-red-500 bg-red-100 rounded-full flex items-center justify-center p-1">
+                                            <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-1">
                                                 <svg class="w-5 h-5"><use href="#x-icon"></use></svg>
                                             </div>
                                             <span>دارای نقص</span>
                                         </div>
                                     </div>
-                                    <div class="flex gap-4 px-6">
-                                        <div class="basis-1/2 bg-background dark:bg-darkBackground border-r-4 border-orange-500/30 p-2 rounded">
-
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 px-6">
+                                        <div class="healthDropDown">
+                                            <!-- dropdownbtn -->
+                                            <div class="bg-background dark:bg-darkBackground border-r-8 border-orange-500/30 p-2.5 rounded cursor-pointer flex justify-between items-center">
+                                                <div class="space-y-4">
+                                                    <span class="text-sm sm:text-base">بدنه + لاستیک</span>
+                                                    <div class="flex gap-2">
+                                                        <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                            <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                                <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                            </div>
+                                                            <span class="text-xs">13</span>
+                                                        </div>
+                                                        <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                            <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                                                                <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                                                            </div>
+                                                            <span class="text-xs">3</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex gap-6">
+                                                    <div class="flex items-center">
+                                                        <span>5</span>
+                                                        <span>/</span>
+                                                        <span>4.5</span>
+                                                        <svg class="w-4 h-4 ms-1 text-orange-500"><use href="#star-icon"></use></svg>
+                                                    </div>
+                                                    <svg class="h-8 w-8 p-1 bg-surface-300 dark:bg-darksurface-500 rounded-full flex items-center justify-center"><use href="#chevron-down-icon"></use></svg>
+                                                </div>
+                                            </div>
+                                            <!-- dropdownContent -->
+                                            <div class="bg-background dark:bg-darkBackground border-t border-thinTextColor dark:border-darkThinTextColor py-3 -mt-1.5 px-3 space-y-3 transition-all duration-300 h-auto opacity-100 closed">
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت روکش صندلی ها</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-500 ps-6">چرم های صندلی پاره شده</span>
+                                                    <span class="text-xs block text-red-500 ps-6">زیری ده بعدی</span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                     <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت شاسی جلو</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                   <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                       <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                           <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                       </div>
+                                                       <span class="text-sm">سلامت سقف خودرو</span>
+                                                   </div>
+                                                   <!-- detail text -->
+                                                   <span class="text-xs block text-red-green ps-6"></span>
+                                               </div>
+                                               <!-- wheel -->
+                                               <div class="flex justify-between items-center text-sm"><span>زاپاس</span><span>90-100</span></div>
+                                               <div class="flex justify-between items-center text-sm"><span>جلو شاگرد</span><span>70-80</span></div>
+                                               <div class="flex justify-between items-center text-sm"><span>عقب شاگرد</span><span>90-100</span></div>
+                                               <div class="flex justify-between items-center text-sm"><span>عقب راننده</span><span>90-100</span></div>
+                                               <div class="flex justify-between items-center text-sm"><span>جلو راننده</span><span>90-100</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="healthDropDown">
+                                            <!-- dropdownbtn -->
+                                            <div class="bg-background dark:bg-darkBackground border-r-8 border-orange-500/30 p-2.5 rounded cursor-pointer flex justify-between items-center">
+                                                <div class="space-y-4">
+                                                    <span class="text-sm sm:text-base">موتور</span>
+                                                    <div class="flex gap-2">
+                                                        <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                            <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                                <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                            </div>
+                                                            <span class="text-xs">13</span>
+                                                        </div>
+                                                        <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                            <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                                                                <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                                                            </div>
+                                                            <span class="text-xs">3</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex gap-6">
+                                                    <div class="flex items-center">
+                                                        <span>5</span>
+                                                        <span>/</span>
+                                                        <span>4.5</span>
+                                                        <svg class="w-4 h-4 ms-1 text-orange-500"><use href="#star-icon"></use></svg>
+                                                    </div>
+                                                    <svg class="h-8 w-8 p-1 bg-surface-300 dark:bg-darksurface-500 rounded-full flex items-center justify-center"><use href="#chevron-down-icon"></use></svg>
+                                                </div>
+                                            </div>
+                                            <!-- dropdownContent -->
+                                            <div class="bg-background dark:bg-darkBackground border-t border-thinTextColor dark:border-darkThinTextColor py-3 -mt-1.5 px-3 space-y-3 transition-all duration-300 h-auto opacity-100 closed">
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت روکش صندلی ها</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-500 ps-6">چرم های صندلی پاره شده</span>
+                                                    <span class="text-xs block text-red-500 ps-6">زیری ده بعدی</span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                     <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت شاسی جلو</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                   <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                       <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                           <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                       </div>
+                                                       <span class="text-sm">سلامت سقف خودرو</span>
+                                                   </div>
+                                                   <!-- detail text -->
+                                                   <span class="text-xs block text-red-green ps-6"></span>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        <div class="healthDropDown">
+                                            <!-- dropdownbtn -->
+                                            <div class="bg-background dark:bg-darkBackground border-r-8 border-orange-500/30 p-2.5 rounded cursor-pointer flex justify-between items-center">
+                                                <div class="space-y-4">
+                                                    <span class="text-sm sm:text-base">سیستم برقی داخلی</span>
+                                                    <div class="flex gap-2">
+                                                        <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                            <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                                <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                            </div>
+                                                            <span class="text-xs">13</span>
+                                                        </div>
+                                                        <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                            <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                                                                <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                                                            </div>
+                                                            <span class="text-xs">3</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex gap-6">
+                                                    <div class="flex items-center">
+                                                        <span>5</span>
+                                                        <span>/</span>
+                                                        <span>4.5</span>
+                                                        <svg class="w-4 h-4 ms-1 text-orange-500"><use href="#star-icon"></use></svg>
+                                                    </div>
+                                                    <svg class="h-8 w-8 p-1 bg-surface-300 dark:bg-darksurface-500 rounded-full flex items-center justify-center"><use href="#chevron-down-icon"></use></svg>
+                                                </div>
+                                            </div>
+                                            <!-- dropdownContent -->
+                                            <div class="bg-background dark:bg-darkBackground border-t border-thinTextColor dark:border-darkThinTextColor py-3 -mt-1.5 px-3 space-y-3 transition-all duration-300 h-auto opacity-100 closed">
+                                                <div class="">
+                                                    <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت روکش صندلی ها</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-500 ps-6">چرم های صندلی پاره شده</span>
+                                                    <span class="text-xs block text-red-500 ps-6">زیری ده بعدی</span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                     <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت شاسی جلو</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                   <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                       <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                           <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                       </div>
+                                                       <span class="text-sm">سلامت سقف خودرو</span>
+                                                   </div>
+                                                   <!-- detail text -->
+                                                   <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                   <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                       <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                           <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                       </div>
+                                                       <span class="text-sm">سلامت شاسی جلو</span>
+                                                   </div>
+                                                   <!-- detail text -->
+                                                   <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت سقف خودرو</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت روکش صندلی ها</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-500 ps-6">چرم های صندلی پاره شده</span>
+                                                    <span class="text-xs block text-red-500 ps-6">زیری ده بعدی</span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                     <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت شاسی جلو</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                   <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                       <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                           <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                       </div>
+                                                       <span class="text-sm">سلامت سقف خودرو</span>
+                                                   </div>
+                                                   <!-- detail text -->
+                                                   <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                   <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                       <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                           <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                       </div>
+                                                       <span class="text-sm">سلامت شاسی جلو</span>
+                                                   </div>
+                                                   <!-- detail text -->
+                                                   <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت سقف خودرو</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="healthDropDown">
+                                            <!-- dropdownbtn -->
+                                            <div class="bg-background dark:bg-darkBackground border-r-8 border-orange-500/30 p-2.5 rounded cursor-pointer flex justify-between items-center">
+                                                <div class="space-y-4">
+                                                    <span class="text-sm sm:text-base">سیستم تعلیق</span>
+                                                    <div class="flex gap-2">
+                                                        <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                            <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                                <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                            </div>
+                                                            <span class="text-xs">13</span>
+                                                        </div>
+                                                        <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                            <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                                                                <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                                                            </div>
+                                                            <span class="text-xs">3</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex gap-6">
+                                                    <div class="flex items-center">
+                                                        <span>5</span>
+                                                        <span>/</span>
+                                                        <span>4.5</span>
+                                                        <svg class="w-4 h-4 ms-1 text-orange-500"><use href="#star-icon"></use></svg>
+                                                    </div>
+                                                    <svg class="h-8 w-8 p-1 bg-surface-300 dark:bg-darksurface-500 rounded-full flex items-center justify-center"><use href="#chevron-down-icon"></use></svg>
+                                                </div>
+                                            </div>
+                                            <!-- dropdownContent -->
+                                            <div class="bg-background dark:bg-darkBackground border-t border-thinTextColor dark:border-darkThinTextColor py-3 -mt-1.5 px-3 space-y-3 transition-all duration-300 h-auto opacity-100 closed">
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت روکش صندلی ها</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-500 ps-6">چرم های صندلی پاره شده</span>
+                                                    <span class="text-xs block text-red-500 ps-6">زیری ده بعدی</span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                     <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت شاسی جلو</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                   <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                       <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                           <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                       </div>
+                                                       <span class="text-sm">سلامت سقف خودرو</span>
+                                                   </div>
+                                                   <!-- detail text -->
+                                                   <span class="text-xs block text-red-green ps-6"></span>
+                                               </div>
+                                            </div>
+                                        </div>
+                                        <div class="healthDropDown">
+                                            <!-- dropdownbtn -->
+                                            <div class="bg-background dark:bg-darkBackground border-r-8 border-orange-500/30 p-2.5 rounded cursor-pointer flex justify-between items-center">
+                                                <div class="space-y-4">
+                                                    <span class="text-sm sm:text-base">تهویه مطبوع</span>
+                                                    <div class="flex gap-2">
+                                                        <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                            <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                                <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                            </div>
+                                                            <span class="text-xs">13</span>
+                                                        </div>
+                                                        <div class="flex gap-0.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                            <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                                                                <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                                                            </div>
+                                                            <span class="text-xs">3</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="flex gap-6">
+                                                    <div class="flex items-center">
+                                                        <span>5</span>
+                                                        <span>/</span>
+                                                        <span>4.5</span>
+                                                        <svg class="w-4 h-4 ms-1 text-orange-500"><use href="#star-icon"></use></svg>
+                                                    </div>
+                                                    <svg class="h-8 w-8 p-1 bg-surface-300 dark:bg-darksurface-500 rounded-full flex items-center justify-center"><use href="#chevron-down-icon"></use></svg>
+                                                </div>
+                                            </div>
+                                            <!-- dropdownContent -->
+                                            <div class="bg-background dark:bg-darkBackground border-t border-thinTextColor dark:border-darkThinTextColor py-3 -mt-1.5 px-3 space-y-3 transition-all duration-300 h-auto opacity-100 closed">
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت روکش صندلی ها</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-500 ps-6">چرم های صندلی پاره شده</span>
+                                                    <span class="text-xs block text-red-500 ps-6">زیری ده بعدی</span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                     <!-- icon and text -->
+                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                        </div>
+                                                        <span class="text-sm">سلامت شاسی جلو</span>
+                                                    </div>
+                                                    <!-- detail text -->
+                                                    <span class="text-xs block text-red-green ps-6"></span>
+                                                </div>
+                                                <div class="dropdownContentCaption transition-all">
+                                                    <!-- icon and text -->
+                                                   <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
+                                                       <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                           <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                                                       </div>
+                                                       <span class="text-sm">سلامت سقف خودرو</span>
+                                                   </div>
+                                                   <!-- detail text -->
+                                                   <span class="text-xs block text-red-green ps-6"></span>
+                                               </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -355,7 +780,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="md:w-4/12 w-full md:sticky md:top-24 space-y-8">
                     <!-- course:registering -->
@@ -400,9 +824,537 @@
                     <!-- end course:registering -->
                 </div>
             </div>
+            <!-- slider -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide w-max">
+                        <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
+                            <!-- image section -->
+                            <div class="relative z-10 rounded-3xl overflow-hidden">
+                                <a href="cardetail.html" class="block">
+                                    <img src="images/BMW-M8-Competition-1.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
+                                </a>
+                                <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
+                                    <svg class="w-6 h-6"><use href="#check-badge-icon"></use></svg>
+                                    <span class="font-semibold text-xs">گارانتی هفت روزه سلامت</span>
+                                </div>
+                            </div>
+                            <!-- title box -->
+                            <div class="bg-gradient-to-b from-surface-200 to-surface-300 shadow dark:shadow-none dark:from-darksurface-500 dark:to-darksurface-300 rounded-b-3xl space-y-2 p-5 mx-5">
+                                <div class="flex items-center gap-1">
+                                    <div class="w-1 h-1 bg-green-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-green-500 hidden">موجود</span>
+    
+                                    <div class="w-1 h-1 bg-rose-500 rounded-full"></div>
+                                    <span class="font-bold text-xs ms-1 text-rose-500">فروخته شده</span>
+                                    
+                                    <div class="w-1 h-1 bg-orange-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-orange-500 hidden">درحال معامله</span>
+                                    
+                                    <div class="w-1 h-1 bg-gray-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-gray-500 hidden">باطل شده</span>
+                                </div>
+                                <h2 class="font-bold text-sm">
+                                    <a href="cardetail.html" class="inline-block transition-all hover:text-textColor/70 hover:dark:text-darkTextColor/70 font-morabba text-right">
+                                        <span class="text-right">bmw m8</span>
+                                        <div class="inline-block text-thinTextColor dark:text-darkThinTextColor mx-px">|</div>
+                                        <span>2020</span>
+                                    </a>
+                                </h2>
+                            </div>
+                            <!-- box foot -->
+                            <div class="space-y-3 p-5 flex flex-col justify-end mt-auto">
+                                <div class="flex flex-wrap items-center gap-3 text-thinTextColor dark:text-darkThinTextColor">
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                        <use href="#radar-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">15,000</span>
+                                        <span class="font-semibold text-xs">ک</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                            <use href="#clock-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">5 روز</span>
+                                        <span class="font-semibold text-xs">پیش</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between gap-5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-surface-500 dark:bg-darksurface-300">
+                                            <img src="images/bmw-logo.jpg" class="w-full object-cover" alt="..."/>
+                                        </div>
+                                        <div class="flex flex-col items-start space-y-1">
+                                            <span class="line-clamp-1 font-semibold text-xs text-muted">برند</span>
+                                            <a href="#" class="line-clamp-1 font-bold text-xs hover:text-primary transition-colors">سایپا</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-end justify-center h-14">
+                                        <span class="line-through text-thinTextColor dark:text-darkThinTextColor">۱,۱۹۹,۰۰۰</span>
+                                        <div class="flex items-center gap-1 ">
+                                            <span class="font-black text-lg">۱,۰۷۹,۰۰۰</span>
+                                            <span class="text-xs text-thinTextColor dark:text-darkThinTextColor">تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 mt-3">
+                                    <a href="cardetail.html" class="w-full h-11 inline-flex items-center justify-center gap-1 bg-primary rounded-full text-zinc-300 transition-all hover:opacity-80 px-4">
+                                        <span class="line-clamp-1 font-semibold text-sm">اطلاعات بیشتر</span>
+                                        <svg class="w-6 h-6"><use href="#eye-icon"></use></svg>
+                                    </a>
+                                    <button type="button" class="flex-shrink-0 w-11 h-11 inline-flex items-center justify-center bg-surface-500 dark:bg-darksurface-300 rounded-full text-thinTextColor dark:text-darkThinTextColor transition-colors hover:text-primary">
+                                        <svg class="w-6 h-6"><use href="#bookmark-icon"></use></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-max">
+                        <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
+                            <!-- image section -->
+                            <div class="relative z-10 rounded-3xl overflow-hidden">
+                                <a href="cardetail.html" class="block">
+                                    <img src="images/pride.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
+                                </a>
+                                <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
+                                    <svg class="w-6 h-6"><use href="#check-badge-icon"></use></svg>
+                                    <span class="font-semibold text-xs">گارانتی هفت روزه سلامت</span>
+                                </div>
+                            </div>
+                            <!-- title box -->
+                            <div class="bg-gradient-to-b from-surface-200 to-surface-300 shadow dark:shadow-none dark:from-darksurface-500 dark:to-darksurface-300 rounded-b-3xl space-y-2 p-5 mx-5">
+                                <div class="flex items-center gap-1">
+                                    <div class="w-1 h-1 bg-green-500 rounded-full"></div>
+                                    <span class="font-bold text-xs ms-1 text-green-500">موجود</span>
+        
+                                    <div class="w-1 h-1 bg-rose-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-rose-500 hidden">فروخته شده</span>
+        
+                                    <div class="w-1 h-1 bg-orange-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-orange-500 hidden">درحال معامله</span>
+                                    
+                                    <div class="w-1 h-1 bg-gray-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-gray-500 hidden">باطل شده</span>
+                                </div>
+                                <h2 class="font-bold text-sm">
+                                    <a href="cardetail.html" class="inline-block transition-all hover:text-textColor/70 hover:dark:text-darkTextColor/70 font-morabba text-right">
+                                        <span class="text-right">پراید</span>
+                                        <div class="inline-block text-thinTextColor dark:text-darkThinTextColor mx-px">|</div>
+                                        <span>1390</span>
+                                    </a>
+                                </h2>
+                            </div>
+                            <!-- box foot -->
+                            <div class="space-y-3 p-5 flex flex-col justify-end mt-auto">
+                                <div class="flex flex-wrap items-center gap-3 text-thinTextColor dark:text-darkThinTextColor">
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                        <use href="#radar-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">15,000</span>
+                                        <span class="font-semibold text-xs">ک</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                            <use href="#clock-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">5 روز</span>
+                                        <span class="font-semibold text-xs">پیش</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between gap-5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-surface-500 dark:bg-darksurface-300">
+                                            <img src="images/Saipa_Logo.png" class="w-full object-cover" alt="..."/>
+                                        </div>
+                                        <div class="flex flex-col items-start space-y-1">
+                                            <span class="line-clamp-1 font-semibold text-xs text-muted">برند</span>
+                                            <a href="#" class="line-clamp-1 font-bold text-xs hover:text-primary transition-colors">سایپا</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-end justify-center h-14">
+                                        <span class="line-through text-thinTextColor dark:text-darkThinTextColor">۱,۱۹۹,۰۰۰</span>
+                                        <div class="flex items-center gap-1 ">
+                                            <span class="font-black text-lg">۱,۰۷۹,۰۰۰</span>
+                                            <span class="text-xs text-thinTextColor dark:text-darkThinTextColor">تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 mt-3">
+                                    <a href="cardetail.html" class="w-full h-11 inline-flex items-center justify-center gap-1 bg-primary rounded-full text-zinc-300 transition-all hover:opacity-80 px-4">
+                                        <span class="line-clamp-1 font-semibold text-sm">اطلاعات بیشتر</span>
+                                        <svg class="w-6 h-6"><use href="#eye-icon"></use></svg>
+                                    </a>
+                                    <button type="button" class="flex-shrink-0 w-11 h-11 inline-flex items-center justify-center bg-surface-500 dark:bg-darksurface-300 rounded-full text-thinTextColor dark:text-darkThinTextColor transition-colors hover:text-primary">
+                                        <svg class="w-6 h-6"><use href="#bookmark-icon"></use></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-max">
+                        <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
+                            <!-- image section -->
+                            <div class="relative z-10 rounded-3xl overflow-hidden">
+                                <a href="cardetail.html" class="block">
+                                    <img src="images/BMW-M8-Competition-1.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
+                                </a>
+                                <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
+                                    <svg class="w-6 h-6"><use href="#check-badge-icon"></use></svg>
+                                    <span class="font-semibold text-xs">گارانتی هفت روزه سلامت</span>
+                                </div>
+                            </div>
+                            <!-- title box -->
+                            <div class="bg-gradient-to-b from-surface-200 to-surface-300 shadow dark:shadow-none dark:from-darksurface-500 dark:to-darksurface-300 rounded-b-3xl space-y-2 p-5 mx-5">
+                                <div class="flex items-center gap-1">
+                                    <div class="w-1 h-1 bg-green-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-green-500 hidden">موجود</span>
+        
+                                    <div class="w-1 h-1 bg-rose-500 rounded-full"></div>
+                                    <span class="font-bold text-xs ms-1 text-rose-500">فروخته شده</span>
+                                    
+                                    <div class="w-1 h-1 bg-orange-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-orange-500 hidden">درحال معامله</span>
+                                    
+                                    <div class="w-1 h-1 bg-gray-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-gray-500 hidden">باطل شده</span>
+                                </div>
+                                <h2 class="font-bold text-sm">
+                                    <a href="cardetail.html" class="inline-block transition-all hover:text-textColor/70 hover:dark:text-darkTextColor/70 font-morabba text-right">
+                                        <span class="text-right">bmw m8</span>
+                                        <div class="inline-block text-thinTextColor dark:text-darkThinTextColor mx-px">|</div>
+                                        <span>2020</span>
+                                    </a>
+                                </h2>
+                            </div>
+                            <!-- box foot -->
+                            <div class="space-y-3 p-5 flex flex-col justify-end mt-auto">
+                                <div class="flex flex-wrap items-center gap-3 text-thinTextColor dark:text-darkThinTextColor">
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                        <use href="#radar-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">15,000</span>
+                                        <span class="font-semibold text-xs">ک</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                            <use href="#clock-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">5 روز</span>
+                                        <span class="font-semibold text-xs">پیش</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between gap-5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-surface-500 dark:bg-darksurface-300">
+                                            <img src="images/bmw-logo.jpg" class="w-full object-cover" alt="..."/>
+                                        </div>
+                                        <div class="flex flex-col items-start space-y-1">
+                                            <span class="line-clamp-1 font-semibold text-xs text-muted">برند</span>
+                                            <a href="#" class="line-clamp-1 font-bold text-xs hover:text-primary transition-colors">سایپا</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-end justify-center h-14">
+                                        <span class="line-through text-thinTextColor dark:text-darkThinTextColor">۱,۱۹۹,۰۰۰</span>
+                                        <div class="flex items-center gap-1 ">
+                                            <span class="font-black text-lg">۱,۰۷۹,۰۰۰</span>
+                                            <span class="text-xs text-thinTextColor dark:text-darkThinTextColor">تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 mt-3">
+                                    <a href="cardetail.html" class="w-full h-11 inline-flex items-center justify-center gap-1 bg-primary rounded-full text-zinc-300 transition-all hover:opacity-80 px-4">
+                                        <span class="line-clamp-1 font-semibold text-sm">اطلاعات بیشتر</span>
+                                        <svg class="w-6 h-6"><use href="#eye-icon"></use></svg>
+                                    </a>
+                                    <button type="button" class="flex-shrink-0 w-11 h-11 inline-flex items-center justify-center bg-surface-500 dark:bg-darksurface-300 rounded-full text-thinTextColor dark:text-darkThinTextColor transition-colors hover:text-primary">
+                                        <svg class="w-6 h-6"><use href="#bookmark-icon"></use></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-max">
+                        <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
+                            <!-- image section -->
+                            <div class="relative z-10 rounded-3xl overflow-hidden">
+                                <a href="cardetail.html" class="block">
+                                    <img src="images/BMW-M8-Competition-1.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
+                                </a>
+                                <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
+                                    <svg class="w-6 h-6"><use href="#check-badge-icon"></use></svg>
+                                    <span class="font-semibold text-xs">گارانتی هفت روزه سلامت</span>
+                                </div>
+                            </div>
+                            <!-- title box -->
+                            <div class="bg-gradient-to-b from-surface-200 to-surface-300 shadow dark:shadow-none dark:from-darksurface-500 dark:to-darksurface-300 rounded-b-3xl space-y-2 p-5 mx-5">
+                                <div class="flex items-center gap-1">
+                                    <div class="w-1 h-1 bg-green-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-green-500 hidden">موجود</span>
+    
+                                    <div class="w-1 h-1 bg-rose-500 rounded-full"></div>
+                                    <span class="font-bold text-xs ms-1 text-rose-500">فروخته شده</span>
+                                    
+                                    <div class="w-1 h-1 bg-orange-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-orange-500 hidden">درحال معامله</span>
+                                    
+                                    <div class="w-1 h-1 bg-gray-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-gray-500 hidden">باطل شده</span>
+                                </div>
+                                <h2 class="font-bold text-sm">
+                                    <a href="cardetail.html" class="inline-block transition-all hover:text-textColor/70 hover:dark:text-darkTextColor/70 font-morabba text-right">
+                                        <span class="text-right">bmw m8</span>
+                                        <div class="inline-block text-thinTextColor dark:text-darkThinTextColor mx-px">|</div>
+                                        <span>2020</span>
+                                    </a>
+                                </h2>
+                            </div>
+                            <!-- box foot -->
+                            <div class="space-y-3 p-5 flex flex-col justify-end mt-auto">
+                                <div class="flex flex-wrap items-center gap-3 text-thinTextColor dark:text-darkThinTextColor">
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                        <use href="#radar-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">15,000</span>
+                                        <span class="font-semibold text-xs">ک</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                            <use href="#clock-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">5 روز</span>
+                                        <span class="font-semibold text-xs">پیش</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between gap-5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-surface-500 dark:bg-darksurface-300">
+                                            <img src="images/bmw-logo.jpg" class="w-full object-cover" alt="..."/>
+                                        </div>
+                                        <div class="flex flex-col items-start space-y-1">
+                                            <span class="line-clamp-1 font-semibold text-xs text-muted">برند</span>
+                                            <a href="#" class="line-clamp-1 font-bold text-xs hover:text-primary transition-colors">سایپا</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-end justify-center h-14">
+                                        <span class="line-through text-thinTextColor dark:text-darkThinTextColor">۱,۱۹۹,۰۰۰</span>
+                                        <div class="flex items-center gap-1 ">
+                                            <span class="font-black text-lg">۱,۰۷۹,۰۰۰</span>
+                                            <span class="text-xs text-thinTextColor dark:text-darkThinTextColor">تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 mt-3">
+                                    <a href="cardetail.html" class="w-full h-11 inline-flex items-center justify-center gap-1 bg-primary rounded-full text-zinc-300 transition-all hover:opacity-80 px-4">
+                                        <span class="line-clamp-1 font-semibold text-sm">اطلاعات بیشتر</span>
+                                        <svg class="w-6 h-6"><use href="#eye-icon"></use></svg>
+                                    </a>
+                                    <button type="button" class="flex-shrink-0 w-11 h-11 inline-flex items-center justify-center bg-surface-500 dark:bg-darksurface-300 rounded-full text-thinTextColor dark:text-darkThinTextColor transition-colors hover:text-primary">
+                                        <svg class="w-6 h-6"><use href="#bookmark-icon"></use></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-max">
+                        <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
+                            <!-- image section -->
+                            <div class="relative z-10 rounded-3xl overflow-hidden">
+                                <a href="cardetail.html" class="block">
+                                    <img src="images/pride.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
+                                </a>
+                                <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
+                                    <svg class="w-6 h-6"><use href="#check-badge-icon"></use></svg>
+                                    <span class="font-semibold text-xs">گارانتی هفت روزه سلامت</span>
+                                </div>
+                            </div>
+                            <!-- title box -->
+                            <div class="bg-gradient-to-b from-surface-200 to-surface-300 shadow dark:shadow-none dark:from-darksurface-500 dark:to-darksurface-300 rounded-b-3xl space-y-2 p-5 mx-5">
+                                <div class="flex items-center gap-1">
+                                    <div class="w-1 h-1 bg-green-500 rounded-full"></div>
+                                    <span class="font-bold text-xs ms-1 text-green-500">موجود</span>
+        
+                                    <div class="w-1 h-1 bg-rose-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-rose-500 hidden">فروخته شده</span>
+        
+                                    <div class="w-1 h-1 bg-orange-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-orange-500 hidden">درحال معامله</span>
+                                    
+                                    <div class="w-1 h-1 bg-gray-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-gray-500 hidden">باطل شده</span>
+                                </div>
+                                <h2 class="font-bold text-sm">
+                                    <a href="cardetail.html" class="inline-block transition-all hover:text-textColor/70 hover:dark:text-darkTextColor/70 font-morabba text-right">
+                                        <span class="text-right">پراید</span>
+                                        <div class="inline-block text-thinTextColor dark:text-darkThinTextColor mx-px">|</div>
+                                        <span>1390</span>
+                                    </a>
+                                </h2>
+                            </div>
+                            <!-- box foot -->
+                            <div class="space-y-3 p-5 flex flex-col justify-end mt-auto">
+                                <div class="flex flex-wrap items-center gap-3 text-thinTextColor dark:text-darkThinTextColor">
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                        <use href="#radar-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">15,000</span>
+                                        <span class="font-semibold text-xs">ک</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                            <use href="#clock-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">5 روز</span>
+                                        <span class="font-semibold text-xs">پیش</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between gap-5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-surface-500 dark:bg-darksurface-300">
+                                            <img src="images/Saipa_Logo.png" class="w-full object-cover" alt="..."/>
+                                        </div>
+                                        <div class="flex flex-col items-start space-y-1">
+                                            <span class="line-clamp-1 font-semibold text-xs text-muted">برند</span>
+                                            <a href="#" class="line-clamp-1 font-bold text-xs hover:text-primary transition-colors">سایپا</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-end justify-center h-14">
+                                        <span class="line-through text-thinTextColor dark:text-darkThinTextColor">۱,۱۹۹,۰۰۰</span>
+                                        <div class="flex items-center gap-1 ">
+                                            <span class="font-black text-lg">۱,۰۷۹,۰۰۰</span>
+                                            <span class="text-xs text-thinTextColor dark:text-darkThinTextColor">تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 mt-3">
+                                    <a href="cardetail.html" class="w-full h-11 inline-flex items-center justify-center gap-1 bg-primary rounded-full text-zinc-300 transition-all hover:opacity-80 px-4">
+                                        <span class="line-clamp-1 font-semibold text-sm">اطلاعات بیشتر</span>
+                                        <svg class="w-6 h-6"><use href="#eye-icon"></use></svg>
+                                    </a>
+                                    <button type="button" class="flex-shrink-0 w-11 h-11 inline-flex items-center justify-center bg-surface-500 dark:bg-darksurface-300 rounded-full text-thinTextColor dark:text-darkThinTextColor transition-colors hover:text-primary">
+                                        <svg class="w-6 h-6"><use href="#bookmark-icon"></use></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide w-max">
+                        <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
+                            <!-- image section -->
+                            <div class="relative z-10 rounded-3xl overflow-hidden">
+                                <a href="cardetail.html" class="block">
+                                    <img src="images/BMW-M8-Competition-1.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
+                                </a>
+                                <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
+                                    <svg class="w-6 h-6"><use href="#check-badge-icon"></use></svg>
+                                    <span class="font-semibold text-xs">گارانتی هفت روزه سلامت</span>
+                                </div>
+                            </div>
+                            <!-- title box -->
+                            <div class="bg-gradient-to-b from-surface-200 to-surface-300 shadow dark:shadow-none dark:from-darksurface-500 dark:to-darksurface-300 rounded-b-3xl space-y-2 p-5 mx-5">
+                                <div class="flex items-center gap-1">
+                                    <div class="w-1 h-1 bg-green-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-green-500 hidden">موجود</span>
+        
+                                    <div class="w-1 h-1 bg-rose-500 rounded-full"></div>
+                                    <span class="font-bold text-xs ms-1 text-rose-500">فروخته شده</span>
+                                    
+                                    <div class="w-1 h-1 bg-orange-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-orange-500 hidden">درحال معامله</span>
+                                    
+                                    <div class="w-1 h-1 bg-gray-500 rounded-full hidden"></div>
+                                    <span class="font-bold text-xs ms-1 text-gray-500 hidden">باطل شده</span>
+                                </div>
+                                <h2 class="font-bold text-sm">
+                                    <a href="cardetail.html" class="inline-block transition-all hover:text-textColor/70 hover:dark:text-darkTextColor/70 font-morabba text-right">
+                                        <span class="text-right">bmw m8</span>
+                                        <div class="inline-block text-thinTextColor dark:text-darkThinTextColor mx-px">|</div>
+                                        <span>2020</span>
+                                    </a>
+                                </h2>
+                            </div>
+                            <!-- box foot -->
+                            <div class="space-y-3 p-5 flex flex-col justify-end mt-auto">
+                                <div class="flex flex-wrap items-center gap-3 text-thinTextColor dark:text-darkThinTextColor">
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                        <use href="#radar-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">15,000</span>
+                                        <span class="font-semibold text-xs">ک</span>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <svg class="w-6 h-6">
+                                            <use href="#clock-icon"></use>
+                                        </svg>
+                                        <span class="font-semibold text-xs">5 روز</span>
+                                        <span class="font-semibold text-xs">پیش</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between gap-5">
+                                    <div class="flex items-center gap-3">
+                                        <div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-surface-500 dark:bg-darksurface-300">
+                                            <img src="images/bmw-logo.jpg" class="w-full object-cover" alt="..."/>
+                                        </div>
+                                        <div class="flex flex-col items-start space-y-1">
+                                            <span class="line-clamp-1 font-semibold text-xs text-muted">برند</span>
+                                            <a href="#" class="line-clamp-1 font-bold text-xs hover:text-primary transition-colors">سایپا</a>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col items-end justify-center h-14">
+                                        <span class="line-through text-thinTextColor dark:text-darkThinTextColor">۱,۱۹۹,۰۰۰</span>
+                                        <div class="flex items-center gap-1 ">
+                                            <span class="font-black text-lg">۱,۰۷۹,۰۰۰</span>
+                                            <span class="text-xs text-thinTextColor dark:text-darkThinTextColor">تومان</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex gap-3 mt-3">
+                                    <a href="cardetail.html" class="w-full h-11 inline-flex items-center justify-center gap-1 bg-primary rounded-full text-zinc-300 transition-all hover:opacity-80 px-4">
+                                        <span class="line-clamp-1 font-semibold text-sm">اطلاعات بیشتر</span>
+                                        <svg class="w-6 h-6"><use href="#eye-icon"></use></svg>
+                                    </a>
+                                    <button type="button" class="flex-shrink-0 w-11 h-11 inline-flex items-center justify-center bg-surface-500 dark:bg-darksurface-300 rounded-full text-thinTextColor dark:text-darkThinTextColor transition-colors hover:text-primary">
+                                        <svg class="w-6 h-6"><use href="#bookmark-icon"></use></svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+  
+                <!-- If we need navigation buttons -->
+                <!-- <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div> -->
+         
+              </div>
         </div>
         <!-- end container -->
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        loop: true,
+        spaceBetween:20,
+        slidesPerView:'auto',
+        autoplay:{
+            delay:2500
+        },
+        disableOnInteraction:false,
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        
+    });
+    </script>
+    <script src="js/car-detail.js"></script>
 </body>
 </html>
