@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 @layer base {
+    html{
+        @apply scroll-smooth
+    }
     @font-face {
         font-family: 'Dana';
         src: url("../font/DanaFaNum-Regular.woff");
@@ -19,8 +22,10 @@
         font-family: 'Morabba';
         src: url("../font/Morabba-Regular.woff");
     }
+    
     body{
         font-family: "Dana";
+        
     }
 }
 
@@ -35,4 +40,31 @@
     .closed .dropdownContentCaption{
         @apply !h-0 overflow-hidden !p-0 opacity-0 !border-none
     }
+    .overlay{
+        @apply fixed top-0 right-0 w-full h-full bg-black/40 backdrop-blur-md z-20 transition-all
+    }
+    .modal-title--active{
+        @apply text-primary after:!-top-4
+    }
+    .image-gallery-wrapper {
+        overflow-y: auto;
+      }
+      
+      .image-gallery-wrapper::-webkit-scrollbar {
+        width: 2px;
+      }
+      .image-gallery-wrapper::-webkit-scrollbar-thumb {
+        background-color: #a5a5a5;/* رنگ قسمت کشویی اسکرول بار */
+        border-radius: 4px; /* گردی گوشه‌ها */
+      }
+    .dark .image-gallery-wrapper::-webkit-scrollbar-thumb {
+        background-color: #505050;/* رنگ قسمت کشویی اسکرول بار */
+        border-radius: 4px; /* گردی گوشه‌ها */
+      }
+      .image-gallery-wrapper::-webkit-scrollbar-track {
+        background-color: #e1e1e1; /* رنگ پس‌زمینه اسکرول بار */
+      }
+      .dark .image-gallery-wrapper::-webkit-scrollbar-track {
+        background-color: #797979; /* رنگ پس‌زمینه اسکرول بار */
+      }
 }

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl" class="dark">
+<html lang="en" dir="rtl" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -648,7 +648,7 @@
                                                 <div class="dropdownContentCaption transition-all">
                                                     <!-- icon and text -->
                                                    <div class="flex gap-1.5 items-center text-thinTextColor dark:text-darkThinTextColor">
-                                                       <div class="text-orange-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                                                       <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
                                                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
                                                        </div>
                                                        <span class="text-sm">سلامت شاسی جلو</span>
@@ -1372,6 +1372,36 @@
         </div>
         <!-- end container -->
     </main>
+    <!-- modal -->
+        <div class="car-images-modal hide transition-all duration-300 fixed flex flex-col inset-0 w-full h-full md:max-h-[90%] md:w-[80%] max-w-[1200px] bg-surface-300 dark:bg-darksurface-400 z-50 m-auto rounded-md text-textColor dark:text-darkTextColor">
+            <div class="w-full shadow-lg ps-6 flex items-center gap-5 overflow-hidden shrink-0">
+                <svg id="modal-close-btn" class="w-6 h-6 p-1 border border-textColor dark:border-darkTextColor hover:bg-surface-100 dark:hover:bg-darksurface-500 hover:border-surface-100 dark:hover:border-darksurface-500 rounded-full cursor-pointer transition-all"><use href="#x-icon"></use></svg>
+                <a href="#car-images" class="cursor-pointer relative py-6 transition-colors after:absolute after:right-0 after:left-0 after:mx-auto after:-top-8 after:rounded-full after:w-8 after:h-8 after:bg-primary after:transition-all modal-title modal-title--active">تصاویر ماشین</a>
+                <a href="#car-defect" class="cursor-pointer relative py-6 transition-colors after:absolute after:right-0 after:left-0 after:mx-auto after:-top-8 after:rounded-full after:w-8 after:h-8 after:bg-primary after:transition-all modal-title">نواقص اصلی</a>
+            </div>
+            <!-- image gallery -->
+            <div class="space-y-6 sm:px-6 overflow-y-scroll py-4 image-gallery-wrapper scroll-smooth">
+                <div class="" id="car-images">
+                    <h3 class="text-xl font-morabba font-bold text-textColor dark:text-darkTextColor">عکس های خودرو</h3>
+                </div>
+                <img src="images/BMW-M8-Competition-1.jpg" alt="" class="w-full rounded-md">
+                <img src="images/bmw-m8.jpg" alt="" class="w-full rounded-md">
+                <img src="images/pride.jpg" alt="" class="w-full rounded-md">
+                <img src="images/BMW-M8-Competition-1.jpg" alt="" class="w-full rounded-md">
+                <img src="images/bmw-m8.jpg" alt="" class="w-full rounded-md">
+                <img src="images/pride.jpg" alt="" class="w-full rounded-md">
+                <!-- car defect -->
+                <div class="mt-6 mb-4 flex gap-1 items-center" id="car-defect">
+                    <h3 class="text-xl font-morabba font-bold text-textColor dark:text-darkTextColor">نواقص اصلی</h3>
+                    <div class="max-w-full h-px bg-textColor dark:bg-darkTextColor grow"></div>
+                </div>
+                <img src="images/BMW-M8-Competition-1.jpg" alt="" class="w-full rounded-md">
+                <img src="images/bmw-m8.jpg" alt="" class="w-full rounded-md">
+                <img src="images/pride.jpg" alt="" class="w-full rounded-md">
+                
+            </div>
+        </div>
+    <div class="overlay hide duration-300"></div>
     <script src="js/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper-same-car', {
