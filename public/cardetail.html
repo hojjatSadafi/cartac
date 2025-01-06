@@ -93,6 +93,9 @@
         <symbol id="chevron-down-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
         </symbol>
+        <symbol id="wrench-screwdriver-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17 17.25 21A2.652 2.652 0 0 0 21 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 1 1-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 0 0 4.486-6.336l-3.276 3.277a3.004 3.004 0 0 1-2.25-2.25l3.276-3.276a4.5 4.5 0 0 0-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437 1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008Z" />
+        </symbol>          
     </svg>
     <main class="flex-auto py-5">
         <!-- container -->
@@ -245,6 +248,17 @@
                                     <div class="flex items-center justify-center gap-3 bg-gradient-to-br from-surface-400 to-surface-500 dark:from-darksurface-400 dark:to-darksurface-500 border border-surface-600 dark:border-darksurface-300 rounded-2xl cursor-default py-2 px-6">
                                         <span class="flex items-center justify-center w-8 md:w-12 h-8 md:h-12 bg-background dark:bg-darkBackground rounded-full text-primary">
                                             <svg class="w-5 h-5">
+                                                <use href="#wrench-screwdriver-icon"></use>
+                                            </svg>
+                                        </span>
+                                        <div class="flex flex-col items-center justify-center text-center space-y-1">
+                                            <span class="font-bold text-xs text-thinTextColor dark:text-darkThinTextColor line-clamp-1">وضعیت بدنه</span>
+                                            <span class="font-bold text-sm line-clamp-1">بی رنگ</span>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center justify-center gap-3 bg-gradient-to-br from-surface-400 to-surface-500 dark:from-darksurface-400 dark:to-darksurface-500 border border-surface-600 dark:border-darksurface-300 rounded-2xl cursor-default py-2 px-6">
+                                        <span class="flex items-center justify-center w-8 md:w-12 h-8 md:h-12 bg-background dark:bg-darkBackground rounded-full text-primary">
+                                            <svg class="w-5 h-5">
                                                 <use href="#adjustments-horizontal-icon"></use>
                                             </svg>
                                         </span>
@@ -253,7 +267,7 @@
                                             <span class="font-bold text-sm line-clamp-1">IE</span>
                                         </div>
                                     </div>
-                                 
+                                    
                                 </div>
                                 <!-- health test -->
                                 <div class="bg-surface-100 dark:bg-darksurface-500 rounded-b-lg pb-4 transition-all">
@@ -281,15 +295,15 @@
                                                  <!-- top -->
                                                  <div class="flex flex-wrap gap-4 sm:flex-nowrap justify-center sm:absolute z-0 top-0 right-0 left-0 mx-auto mb-4 sm:mb-0">
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-b-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-b-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <div class="hidden sm:block absolute top-full left-1 w-px h-32 bg-red-400"></div>
                                                     </div>
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-b-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-b-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <div class="hidden sm:block absolute top-full right-1 w-px h-32 bg-red-400"></div>
                                                     </div>
                                                     <div class="sm:absolute bottom-[140%] w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-b-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-b-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <div class="hidden sm:block absolute top-full right-0 left-0 mx-auto w-px h-40 bg-red-400"></div>
                                                     </div>
                                                 </div>
@@ -297,26 +311,26 @@
                                                 <div class="flex flex-wrap gap-4 justify-center sm:block sm:space-y-4 mb-4 sm:mb-16 relative z-0">
                                                     <!-- lineout long miror -->
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-l-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-l-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <svg class="hidden sm:block absolute right-full top-1/2 w-[60px] h-[75px] z-0 text-red-400"><use href="#line-out-long-miror"></use></svg>
                                                     </div>
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-l-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-l-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <svg class="hidden sm:block absolute right-full top-1/2 w-[50px] h-[60px] z-0 text-red-400"><use href="#line-out-long-miror"></use></svg>
                                                     </div>
                                                     <!-- lineout miror -->
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-l-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-l-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <svg class="hidden sm:block absolute right-full top-1/2 w-[61px] h-[20px] z-0 text-red-400"><use href="#line-out-miror"></use></svg>
                                                     </div>
                                                     <!-- line out miror backward -->
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-l-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-l-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <svg class="hidden sm:block absolute right-full bottom-1/2 w-[80px] h-[30px] z-0 text-red-400"><use href="#line-out-miror-backward"></use></svg>
                                                     </div>
                                                     <!-- line out long miror backward  -->
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-l-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-l-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <svg class="hidden sm:block absolute right-full bottom-1/2 w-[50px] h-[60px] z-0 text-red-400"><use href="#line-out-long-miror-backward"></use></svg>
                                                     </div>
                                                 </div>
@@ -324,41 +338,41 @@
                                                 <div class="flex flex-wrap gap-4 justify-center sm:block sm:space-y-4 mb-4 sm:mb-8 relative z-0">
                                                     <!-- line out long -->
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <svg class="hidden sm:block absolute left-full top-1/2 w-[70px] h-[80px] z-0 text-red-400"><use href="#line-out-long"></use></svg>
                                                     </div>
                                                     <!-- line out -->
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <svg class="hidden sm:block absolute left-full top-1/2 w-[61px] h-[20px] z-0 text-red-400"><use href="#line-out"></use></svg>
                                                     </div>
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <svg class="hidden sm:block absolute left-full top-1/2 w-[61px] h-[20px] z-0 text-red-400"><use href="#line-out"></use></svg>
                                                     </div>
                                                     <!-- line out backward -->
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <svg class="hidden sm:block absolute left-full bottom-1/2 w-[80px] h-[30px] z-0 text-red-400"><use href="#line-out-backward"></use></svg>
                                                     </div>
                                                     <!-- line out long backward -->
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <svg class="hidden sm:block absolute left-full bottom-1/2 w-[50px] h-[60px] z-0 text-red-400"><use href="#line-out-long-backward"></use></svg>
                                                     </div>
                                                 </div>
                                                 <!-- bootom -->
                                                 <div class="flex flex-wrap gap-4 sm:flex-nowrap justify-center sm:absolute z-0 bottom-0 right-0 left-0 mx-auto">
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-t-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-t-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <div class="hidden sm:block absolute bottom-full left-1 w-px h-32 bg-red-400"></div>
                                                     </div>
                                                     <div class="relative w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-t-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-t-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <div class="hidden sm:block absolute bottom-full right-1 w-px h-32 bg-red-400"></div>
                                                     </div>
                                                     <div class="sm:absolute top-[140%] w-max">
-                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-t-4 border-red-400 z-10 rounded-sm">صدای عجیب گیربکس</span>
+                                                        <span class="relative text-xs p-1 bg-surface-400 dark:bg-darkSurfaceTonal-300 border-r-4 sm:border-r-0 sm:border-t-4 border-red-400 z-10 rounded-sm cursor-pointer car-defect-link">صدای عجیب گیربکس</span>
                                                         <div class="hidden sm:block absolute bottom-full right-0 left-0 mx-auto w-px h-40 bg-red-400"></div>
                                                     </div>
                                                 </div>

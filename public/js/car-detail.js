@@ -5,6 +5,7 @@ const modalCloseBtn = document.getElementById('modal-close-btn')
 const carImagesModal = document.querySelector('.car-images-modal')
 const overlay = document.querySelector('.overlay')
 const modalTitles = document.querySelectorAll('.modal-title')
+const carDefectLinks = document.querySelectorAll('.car-defect-link')
 
 
 // funcs
@@ -42,6 +43,9 @@ subImageWrapper.addEventListener('click',event=>{
 modalCloseBtn.addEventListener('click',closeModal)
 overlay.addEventListener('click',closeModal)
 mainCarImg.addEventListener('click',showModal)
+carDefectLinks.forEach(carDefectLink=>{
+    carDefectLink.addEventListener('click',showModal)
+})
 modalTitles.forEach(modalTitle=>{
     modalTitle.addEventListener('click',event=>{
         hideAllModalTitleActive()
