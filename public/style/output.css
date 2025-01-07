@@ -2000,6 +2000,10 @@ body{
   transition-duration: 150ms;
 }
 
+.hover\:\!-top-4:hover {
+  top: -1rem !important;
+}
+
 .hover\:border-surface-100:hover {
   --tw-border-opacity: 1;
   border-color: rgb(250 250 250 / var(--tw-border-opacity, 1));
@@ -2008,6 +2012,11 @@ body{
 .hover\:bg-surface-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(250 250 250 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-textColor:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(41 37 36 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-primary:hover {
@@ -2019,8 +2028,18 @@ body{
   color: rgb(41 37 36 / 0.7);
 }
 
+.hover\:text-surface-100:hover {
+  --tw-text-opacity: 1;
+  color: rgb(250 250 250 / var(--tw-text-opacity, 1));
+}
+
 .hover\:opacity-80:hover {
   opacity: 0.8;
+}
+
+.hover\:after\:\!-top-4:hover::after {
+  content: var(--tw-content);
+  top: -1rem !important;
 }
 
 .group:hover .group-hover\:scale-110 {
@@ -2333,8 +2352,18 @@ body{
   background-color: rgb(40 40 40 / var(--tw-bg-opacity, 1));
 }
 
+.dark\:hover\:bg-darkTextColor:hover:where(.dark, .dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 223 204 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:dark\:text-darkTextColor\/70:where(.dark, .dark *):hover {
   color: rgb(236 223 204 / 0.7);
+}
+
+.dark\:hover\:text-darksurface-500:hover:where(.dark, .dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(40 40 40 / var(--tw-text-opacity, 1));
 }
 
 @media (min-width: 640px) {
