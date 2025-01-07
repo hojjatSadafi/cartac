@@ -67,4 +67,7 @@
       .dark .image-gallery-wrapper::-webkit-scrollbar-track {
         background-color: #797979; /* رنگ پس‌زمینه اسکرول بار */
       }
+      .header--scroll{
+        @apply !py-3 bg-surface-700/10 dark:bg-darksurface-100/10 backdrop-blur-md
+      }
 }
