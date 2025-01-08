@@ -58,10 +58,12 @@
     <header class="header fixed top-0 right-0 left-0 py-5 transition-all duration-500 z-30">
         <div class="container flex justify-between items-center text-textColor dark:text-darkTextColor font-morabba">
             <!-- login or account -->
-            <div class="hidden sm:flex gap-1 cursor-pointer items-center hover:text-textColor/80 dark:hover:text-darkTextColor/80  transition-all">
+            <div class="hidden sm:flex gap-1 relative cursor-pointer items-center hover:text-textColor/80 dark:hover:text-darkTextColor/80  transition-all">
                 <svg class="w-6 h-6"><use href="#user-icon"></use></svg>
                 <span>حساب من</span>
                 <svg class="w-6 h-6"><use href="#chevron-down-icon"></use></svg>
+                <!-- dropdown -->
+                 <div class="absolute bg-surface-200 dark:bg-darksurface-500"></div>
             </div>
             <!-- nav -->
             <nav class="hidden sm:flex gap-6 font-bold">
@@ -83,7 +85,7 @@
                         <svg class="w-5 h-5"><use href="#chevron-down-icon"></use></svg>
                     </div>
                     <!-- drop down content -->
-                    <div class="w-full bg-surface-300 dark:bg-darksurface-400 px-4 pb2 pb-1">
+                    <div class="w-full bg-surface-400 dark:bg-darksurface-400 px-4 pb2 pb-1">
                         <span class="block text-sm text-center">حجت صدفی</span>
                         <span class="block text-xs text-center text-thinTextColor dark:text-darkThinTextColor">09050495539</span>
                         <a href="#" class="flex items-center gap-1">
@@ -148,7 +150,16 @@
                     <div class="w-2 h-0.5 bg-surface-400 dark:bg-darksurface-500"></div>
                     <svg class="w-8 h-8 p-1 bg-surface-400 dark:bg-darksurface-500 rounded-lg text-textColor dark:text-darkTextColor"><use href="#smile-icon"></use></svg>
                 </div>
-                <img src="images/cls-benz.png" alt="" class="w-3/4 sm:w-1/2 md:w-full mx-auto">
+                <div class="flex items-center flex-col-reverse pb-2">
+                    <div class="flex gap-6 md:hidden">
+                        <div class="w-4 h-4 bg-primary rounded-full"></div>
+                        <div class="w-4 h-4 bg-primary rounded-full"></div>
+                        <div class="w-4 h-4 bg-primary rounded-full"></div>
+                        <div class="w-4 h-4 bg-primary rounded-full"></div>
+                        <div class="w-4 h-4 bg-primary rounded-full"></div>
+                    </div>
+                    <img src="images/cls-benz.png" alt="" class="w-3/4 sm:w-1/2 md:w-full mx-auto">
+                </div>
             </div>
             <div class="hidden md:flex basis-1/2 flex-col justify-center gap-14 items-center pe-4 relative text-textColor dark:text-darkTextColor pt-12">
                 <h1 class="font-morabba lg:pe-24">
