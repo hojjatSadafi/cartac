@@ -50,6 +50,7 @@ module.exports = {
         "danaBold":"DanaBold",
         "danaExtraBlack":"DanaExtraBlack",
         "morabba":"Morabba",
+        "moul":"Moul",
       }
       
     },
