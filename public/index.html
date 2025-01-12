@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/output.css">
 </head>
 <body class="bg-background dark:bg-darkBackground min-h-screen">
@@ -195,9 +196,9 @@
     </section>
     <!-- popular car section -->
     <section class="container flex text-textColor dark:text-darkTextColor">
-        <div class="basis-4/12">
+        <div class="basis-full sm:basis-10/12 md:basis-5/12 lg:basis-4/12 mx-auto lg:mx-0">
             <!-- title -->
-            <h2 class="font-morabba text-3xl text-center">ماشین محبوبت رو انتخاب کن</h2> 
+            <h2 class="font-morabba text-3xl text-center font-bold">ماشین محبوبت رو انتخاب کن</h2> 
             <!-- btns -->
             <div class="flex justify-evenly my-8" id="popularSectionBtnWrapper">
                 <span data-toggle-id="newCardWrapper" class="cursor-pointer text-primary">جدید</span>
@@ -210,10 +211,10 @@
                 <div id="newCardWrapper" class="space-y-4 transition-all duration-500">
                     <!-- cards -->
                     <div class="flex items-center p-2 gap-2 rounded bg-gradient-to-tr from-surface-400 dark:from-darksurface-500 to-surface-300 dark:to-darksurface-400">
-                        <div class="basis-3/12">
+                        <div class="basis-4/12 sm:basis-3/12">
                             <img src="images/samand.png" alt="" class="w-full max-h-full rounded-sm">
                         </div>
-                        <div class="basis-9/12 space-y-1">
+                        <div class="basis-8/12 sm:basis-9/12 space-y-1">
                             <!-- title -->
                             <div class="space-x-1">
                                 <span>سمندLx</span>
@@ -231,17 +232,17 @@
                                 <svg class="w-4 h-4 text-transparent stroke-orange-500"><use href="#star-icon"></use></svg>
                             </div>
                             <!-- price and buy btn -->
-                            <div class="flex justify-between items-center">
-                                <span class="flex items-end self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
-                                <a href="cardetail.html" class="flex items-center justify-center px-1 text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
+                            <div class="flex justify-between items-center flex-wrap gap-y-2 flex-col sm:flex-row">
+                                <span class="flex items-end self-start sm:self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
+                                <a href="cardetail.html" class="flex items-center justify-center px-1 py-1 sm:py-0 w-full sm:w-max text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
                             </div>
                         </div>
                     </div>
                     <div class="flex p-2 gap-2 rounded bg-gradient-to-tr from-surface-400 dark:from-darksurface-500 to-surface-300 dark:to-darksurface-400">
-                        <div class="basis-3/12">
+                        <div class="basis-4/12 sm:basis-3/12">
                             <img src="images/samand.png" alt="" class="w-full max-h-full rounded-sm">
                         </div>
-                        <div class="basis-9/12 space-y-1">
+                        <div class="basis-8/12 sm:basis-9/12 space-y-1">
                             <!-- title -->
                             <div class="space-x-1">
                                 <span>سمندLx</span>
@@ -259,17 +260,17 @@
                                 <svg class="w-4 h-4 text-transparent stroke-orange-500"><use href="#star-icon"></use></svg>
                             </div>
                             <!-- price and buy btn -->
-                            <div class="flex justify-between items-center">
-                                <span class="flex items-end self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
-                                <a href="cardetail.html" class="flex items-center justify-center px-1 text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
+                            <div class="flex justify-between items-center flex-wrap gap-y-2 flex-col sm:flex-row">
+                                <span class="flex items-end self-start sm:self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
+                                <a href="cardetail.html" class="flex items-center justify-center px-1 py-1 sm:py-0 w-full sm:w-max text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
                             </div>
                         </div>
                     </div>
                     <div class="flex p-2 gap-2 rounded bg-gradient-to-tr from-surface-400 dark:from-darksurface-500 to-surface-300 dark:to-darksurface-400">
-                        <div class="basis-3/12">
+                        <div class="basis-4/12 sm:basis-3/12">
                             <img src="images/samand.png" alt="" class="w-full max-h-full rounded-sm">
                         </div>
-                        <div class="basis-9/12 space-y-1">
+                        <div class="basis-8/12 sm:basis-9/12 space-y-1">
                             <!-- title -->
                             <div class="space-x-1">
                                 <span>سمندLx</span>
@@ -287,9 +288,9 @@
                                 <svg class="w-4 h-4 text-transparent stroke-orange-500"><use href="#star-icon"></use></svg>
                             </div>
                             <!-- price and buy btn -->
-                            <div class="flex justify-between items-center">
-                                <span class="flex items-end self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
-                                <a href="cardetail.html" class="flex items-center justify-center px-1 text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
+                            <div class="flex justify-between items-center flex-wrap gap-y-2 flex-col sm:flex-row">
+                                <span class="flex items-end self-start sm:self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
+                                <a href="cardetail.html" class="flex items-center justify-center px-1 py-1 sm:py-0 w-full sm:w-max text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
                             </div>
                         </div>
                     </div>
@@ -297,10 +298,10 @@
                 <div id="popularCardWrapper" class="space-y-4 transition-all duration-500 closed">
                     <!-- cards -->
                     <div class="flex items-center p-2 gap-2 rounded bg-gradient-to-tr from-surface-400 dark:from-darksurface-500 to-surface-300 dark:to-darksurface-400">
-                        <div class="basis-3/12">
+                        <div class="basis-4/12 sm:basis-3/12">
                             <img src="images/samand.png" alt="" class="w-full max-h-full rounded-sm">
                         </div>
-                        <div class="basis-9/12 space-y-1">
+                        <div class="basis-8/12 sm:basis-9/12 space-y-1">
                             <!-- title -->
                             <div class="space-x-1">
                                 <span>سمندLx</span>
@@ -318,17 +319,17 @@
                                 <svg class="w-4 h-4 text-transparent stroke-orange-500"><use href="#star-icon"></use></svg>
                             </div>
                             <!-- price and buy btn -->
-                            <div class="flex justify-between items-center">
-                                <span class="flex items-end self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
-                                <a href="cardetail.html" class="flex items-center justify-center px-1 text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
+                            <div class="flex justify-between items-center flex-wrap gap-y-2 flex-col sm:flex-row">
+                                <span class="flex items-end self-start sm:self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
+                                <a href="cardetail.html" class="flex items-center justify-center px-1 py-1 sm:py-0 w-full sm:w-max text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
                             </div>
                         </div>
                     </div>
                     <div class="flex p-2 gap-2 rounded bg-gradient-to-tr from-surface-400 dark:from-darksurface-500 to-surface-300 dark:to-darksurface-400">
-                        <div class="basis-3/12">
+                        <div class="basis-4/12 sm:basis-3/12">
                             <img src="images/samand.png" alt="" class="w-full max-h-full rounded-sm">
                         </div>
-                        <div class="basis-9/12 space-y-1">
+                        <div class="basis-8/12 sm:basis-9/12 space-y-1">
                             <!-- title -->
                             <div class="space-x-1">
                                 <span>سمندLx</span>
@@ -346,17 +347,17 @@
                                 <svg class="w-4 h-4 text-transparent stroke-orange-500"><use href="#star-icon"></use></svg>
                             </div>
                             <!-- price and buy btn -->
-                            <div class="flex justify-between items-center">
-                                <span class="flex items-end self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
-                                <a href="cardetail.html" class="flex items-center justify-center px-1 text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
+                            <div class="flex justify-between items-center flex-wrap gap-y-2 flex-col sm:flex-row">
+                                <span class="flex items-end self-start sm:self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
+                                <a href="cardetail.html" class="flex items-center justify-center px-1 py-1 sm:py-0 w-full sm:w-max text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
                             </div>
                         </div>
                     </div>
                     <div class="flex p-2 gap-2 rounded bg-gradient-to-tr from-surface-400 dark:from-darksurface-500 to-surface-300 dark:to-darksurface-400">
-                        <div class="basis-3/12">
+                        <div class="basis-4/12 sm:basis-3/12">
                             <img src="images/samand.png" alt="" class="w-full max-h-full rounded-sm">
                         </div>
-                        <div class="basis-9/12 space-y-1">
+                        <div class="basis-8/12 sm:basis-9/12 space-y-1">
                             <!-- title -->
                             <div class="space-x-1">
                                 <span>سمندLx</span>
@@ -374,17 +375,17 @@
                                 <svg class="w-4 h-4 text-transparent stroke-orange-500"><use href="#star-icon"></use></svg>
                             </div>
                             <!-- price and buy btn -->
-                            <div class="flex justify-between items-center">
-                                <span class="flex items-end self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
-                                <a href="cardetail.html" class="flex items-center justify-center px-1 text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
+                            <div class="flex justify-between items-center flex-wrap gap-y-2 flex-col sm:flex-row">
+                                <span class="flex items-end self-start sm:self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
+                                <a href="cardetail.html" class="flex items-center justify-center px-1 py-1 sm:py-0 w-full sm:w-max text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
                             </div>
                         </div>
                     </div>
                     <div class="flex p-2 gap-2 rounded bg-gradient-to-tr from-surface-400 dark:from-darksurface-500 to-surface-300 dark:to-darksurface-400">
-                        <div class="basis-3/12">
+                        <div class="basis-4/12 sm:basis-3/12">
                             <img src="images/samand.png" alt="" class="w-full max-h-full rounded-sm">
                         </div>
-                        <div class="basis-9/12 space-y-1">
+                        <div class="basis-8/12 sm:basis-9/12 space-y-1">
                             <!-- title -->
                             <div class="space-x-1">
                                 <span>سمندLx</span>
@@ -402,9 +403,9 @@
                                 <svg class="w-4 h-4 text-transparent stroke-orange-500"><use href="#star-icon"></use></svg>
                             </div>
                             <!-- price and buy btn -->
-                            <div class="flex justify-between items-center">
-                                <span class="flex items-end self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
-                                <a href="cardetail.html" class="flex items-center justify-center px-1 text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
+                            <div class="flex justify-between items-center flex-wrap gap-y-2 flex-col sm:flex-row">
+                                <span class="flex items-end self-start sm:self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
+                                <a href="cardetail.html" class="flex items-center justify-center px-1 py-1 sm:py-0 w-full sm:w-max text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
                             </div>
                         </div>
                     </div>
@@ -412,10 +413,10 @@
                 <div id="workedCardWrapper" class="space-y-4 transition-all duration-500 closed">
                     <!-- cards -->
                     <div class="flex p-2 gap-2 rounded bg-gradient-to-tr from-surface-400 dark:from-darksurface-500 to-surface-300 dark:to-darksurface-400">
-                        <div class="basis-3/12">
+                        <div class="basis-4/12 sm:basis-3/12">
                             <img src="images/samand.png" alt="" class="w-full max-h-full rounded-sm">
                         </div>
-                        <div class="basis-9/12 space-y-1">
+                        <div class="basis-8/12 sm:basis-9/12 space-y-1">
                             <!-- title -->
                             <div class="space-x-1">
                                 <span>سمندLx</span>
@@ -433,17 +434,17 @@
                                 <svg class="w-4 h-4 text-transparent stroke-orange-500"><use href="#star-icon"></use></svg>
                             </div>
                             <!-- price and buy btn -->
-                            <div class="flex justify-between items-center">
-                                <span class="flex items-end self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
-                                <a href="cardetail.html" class="flex items-center justify-center px-1 text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
+                            <div class="flex justify-between items-center flex-wrap gap-y-2 flex-col sm:flex-row">
+                                <span class="flex items-end self-start sm:self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
+                                <a href="cardetail.html" class="flex items-center justify-center px-1 py-1 sm:py-0 w-full sm:w-max text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
                             </div>
                         </div>
                     </div>
                     <div class="flex p-2 gap-2 rounded bg-gradient-to-tr from-surface-400 dark:from-darksurface-500 to-surface-300 dark:to-darksurface-400">
-                        <div class="basis-3/12">
+                        <div class="basis-4/12 sm:basis-3/12">
                             <img src="images/samand.png" alt="" class="w-full max-h-full rounded-sm">
                         </div>
-                        <div class="basis-9/12 space-y-1">
+                        <div class="basis-8/12 sm:basis-9/12 space-y-1">
                             <!-- title -->
                             <div class="space-x-1">
                                 <span>سمندLx</span>
@@ -461,18 +462,99 @@
                                 <svg class="w-4 h-4 text-transparent stroke-orange-500"><use href="#star-icon"></use></svg>
                             </div>
                             <!-- price and buy btn -->
-                            <div class="flex justify-between items-center">
-                                <span class="flex items-end self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
-                                <a href="cardetail.html" class="flex items-center justify-center px-1 text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
+                            <div class="flex justify-between items-center flex-wrap gap-y-2 flex-col sm:flex-row">
+                                <span class="flex items-end self-start sm:self-end gap-0.5"><span class="font-moul leading-none">450,000,000</span><span class="leading-none">ت</span></span>
+                                <a href="cardetail.html" class="flex items-center justify-center px-1 py-1 sm:py-0 w-full sm:w-max text-sm font-bold rounded border border-textColor dark:border-darkTextColor">اطلاعات بیشتر</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="hidden lg:block basis-8/12 relative">
+            <img src="images/blob-haikei (3).svg" alt="" class="absolute w-2/3 top-0 right-10 left-0 mx-auto z-[1]">
+            <img src="images/car-key.png" alt="" class="relative z-[2] mx-auto w-1/2 pt-16">
+        </div>
     </section>
+    <!-- carocell section -->
+    <section class="w-full py-5 bg-gradient-to-r from-surface-400 to-surface-500 dark:from-darksurface-400 dark:to-darksurface-500 overflow-hidden my-14">
+        <div class="animate-translatex0to90 flex items-center gap-5 overflow-hidden w-max my-auto text-lg sm:text-2xl font-morabbaBold text-primary">
+            <img src="images/car-logo/360_F_442787076_iwIYHu3X0vISUyN8ndqCCbXKIaOeznPl-Photoroom.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/BMW_logo_(gray).svg.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/chevrolet-logo-on-transparent-background-free-vector-Photoroom.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/daewoo-logo-vector.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/FIAT_logo_(2020).svg.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Ford_logo_flat.svg.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/hyundai-logo-png_seeklogo-309777.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Mercedes-Benz_Star_2022.svg.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Mitsubishi-Vector-Logo-Ai-Eps--Photoroom.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Nissan_2020_logo.svg.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/peugeot-logo.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/renault-yeni-logo-2-Photoroom.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Saipa-logo-2560x1440.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Screenshot-2024-08-30-155545-Photoroom.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/ssangyong-logo-black-and-white.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Toyota-Logo-1-Photoroom.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/360_F_442787076_iwIYHu3X0vISUyN8ndqCCbXKIaOeznPl-Photoroom.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/BMW_logo_(gray).svg.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/chevrolet-logo-on-transparent-background-free-vector-Photoroom.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/daewoo-logo-vector.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/FIAT_logo_(2020).svg.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Ford_logo_flat.svg.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/hyundai-logo-png_seeklogo-309777.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Mercedes-Benz_Star_2022.svg.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Mitsubishi-Vector-Logo-Ai-Eps--Photoroom.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Nissan_2020_logo.svg.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/peugeot-logo.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/renault-yeni-logo-2-Photoroom.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Saipa-logo-2560x1440.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Screenshot-2024-08-30-155545-Photoroom.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/ssangyong-logo-black-and-white.png" alt="" class="inline-block h-10">
+            <img src="images/car-logo/Toyota-Logo-1-Photoroom.png" alt="" class="inline-block h-10">
+        </div>
+    </section>
+    <!-- brand select section -->
+    <section class="container text-textColor dark:text-darkTextColor space-y-8">
+        <h2 class="font-morabba text-3xl text-center font-bold">برند محبوبت رو انتخاب کن</h2> 
+        <div class="brand-slider swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <a href="#" class="swiper-slide flex flex-col items-center w-max">
+                <img src="images/car-image/bmw.png" alt="" class="h-14 sm:h-28">
+                <span class="text-xl">بی ام و</span>
+              </a>
+              <a href="#" class="swiper-slide flex flex-col items-center w-max">
+                <img src="images/car-image/ford.png" alt="" class="h-14 sm:h-28">
+                <span class="text-xl">فورد</span>
+              </a>
+              <a href="#" class="swiper-slide flex flex-col items-center w-max">
+                <img src="images/car-image/jack.png" alt="" class="h-14 sm:h-28">
+                <span class="text-xl">جک</span>
+              </a>
+              <a href="#" class="swiper-slide flex flex-col items-center w-max">
+                <img src="images/car-image/peugeot.png" alt="" class="h-14 sm:h-28">
+                <span class="text-xl">پژو</span>
+              </a>
+              <a href="#" class="swiper-slide flex flex-col items-center w-max">
+                <img src="images/car-image/porche.png" alt="" class="h-14 sm:h-28">
+                <span class="text-xl">پورشه</span>
+              </a>
+            </div>
+          </div>
+    </section>
+    <!-- section -->
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            spaceBetween:20,
+            slidesPerView:'auto',
+            autoplay:{
+                delay:2500
+            }
+        });
+    </script>
     <script src="js/index.js"></script>
     </body>
     </html>

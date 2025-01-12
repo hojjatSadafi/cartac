@@ -51,8 +51,17 @@ module.exports = {
         "danaExtraBlack":"DanaExtraBlack",
         "morabba":"Morabba",
         "moul":"Moul",
-      }
-      
+      },
+
+      animation:{
+        translatex0to90 : 'translateX0to90 80s infinite linear alternate',
+      },
+      keyframes:{
+        translateX0to90:{
+          "0%":{transform : "translateX(0%)"},
+          "100%":{transform : "translateX(60%)"},
+        },
+      },
     },
   },
   plugins: [],
