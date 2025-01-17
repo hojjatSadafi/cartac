@@ -67,6 +67,12 @@
         <symbol id="wallet-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wallet">
             <path d="M19 7V4a1 1 0 0 0-1-1H5a2 2 0 0 0 0 4h15a1 1 0 0 1 1 1v4h-3a2 2 0 0 0 0 4h3a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1"/><path d="M3 5v14a2 2 0 0 0 2 2h15a1 1 0 0 0 1-1v-4"/>
         </symbol>
+        <symbol id="instagram-icon" fill="currentColor" class="size-6" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+        </symbol>
+        <symbol id="telegram-icon" viewBox="0 0 100 100" fill="currentColor" class="size-6" xmlns="http://www.w3.org/2000/svg">
+            <path d="M70.7373 29.3678C70.7373 29.3678 75.3626 27.5643 74.9772 31.9444C74.8487 33.748 73.6924 40.0605 72.793 46.8883L69.7094 67.1142C69.7094 67.1142 69.4525 70.0772 67.1398 70.5925C64.827 71.1078 61.3581 68.789 60.7156 68.2736C60.2017 67.8872 51.0795 62.0899 47.8674 59.2557C46.968 58.4828 45.9401 56.9368 47.9958 55.1332L61.4866 42.2506C63.0284 40.7047 64.5701 37.0975 58.146 41.4776L40.1585 53.7162C40.1585 53.7162 38.1027 55.0044 34.2483 53.845L25.8969 51.2685C25.8969 51.2685 22.8133 49.3361 28.0811 47.4036C40.9294 41.3487 56.7328 35.165 70.7373 29.3678Z" fill="currentColor"></path>
+        </symbol>
     </svg>
     <header class="header fixed top-0 right-0 left-0 py-5 transition-all duration-500 z-30">
         <div class="container flex justify-between items-center text-textColor dark:text-darkTextColor font-morabba">
@@ -481,7 +487,8 @@
             </div>
         </div>
         <div class="hidden lg:block basis-8/12 relative">
-            <img src="images/blob-haikei (3).svg" alt="" class="absolute w-2/3 top-0 right-10 left-0 mx-auto z-[1]">
+            <img src="images/blob-haikei-dark.svg" alt="" class="absolute w-2/3 top-0 right-10 left-0 mx-auto z-[1] hidden dark:block">
+            <img src="images/blob-haikei.svg" alt="" class="absolute w-2/3 top-0 right-10 left-0 mx-auto z-[1] dark:hidden">
             <img src="images/car-key.png" alt="" class="relative z-[2] mx-auto w-1/2 pt-16">
         </div>
     </section>
@@ -632,7 +639,53 @@
         <img src="images/wave-abckward.svg" alt="" class="w-full dark:hidden">
         <img src="images/wave-abckward-dark.svg" alt="" class="w-full hidden dark:block">
     </section>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer class="mt-20 mb-10 container">
+        <!-- content -->
+        <div class="w-11/12 border-2 border-surface-500 dark:border-darksurface-500 text-textColor dark:text-darkTextColor rounded-md mx-auto flex flex-col sm:flex-row ">
+            <!-- info card -->
+            <div class="sm:basis-4/12 md:basis-3/12 min-h-full p-4 bg-gradient-to-tl from-white/10 to-white/[0.02] border-l-2 border-surface-500 dark:border-darksurface-500 backdrop-blur-[6px] rounded-md rounded-e-none flex flex-col justify-center text-center gap-4">
+                <a href="#"><img src="images/aura-logo.png" alt="" class="mx-auto w-16"></a>
+                <h3 class="font-morabba font-bold text-xl">کار تاک</h4>
+                <p class="text-sm">مارا در شبکه های اجتماعی دنبال کنید</p>
+                <!-- social link's -->
+                <div class="flex gap-2 justify-center">
+                    <a href="#" class="flex items-center justify-center text-white/80 rounded-full w-8 h-8 p-1 bg-gradient-to-br from-pink-500 to-orange-500 group"><svg class="w-5 h-5 group-hover:rotate-[360deg] transition-transform duration-500"><use href="#instagram-icon"></use></svg></a>
+                    <a href="#" class="flex items-center justify-center text-white/80 rounded-full w-8 h-8 p-1 bg-gradient-to-br from-sky-500 to-sky-600 group"><svg class="w-full h-full group-hover:rotate-[360deg] transition-transform duration-500"><use href="#telegram-icon"></use></svg></a>
+                </div>
+            </div>
+            <!-- footer content -->
+            <div class="sm:basis-8/12 md:basis-9/12 pb-2">
+               <div class="flex justify-evenly flex-wrap px-4 py-8 gap-7 text-center sm:text-right">
+                <ul>
+                    <h4 class="text-lg mb-4">دسترسی سریع</h4>
+                    <li class="sm:ps-6 relative mb-2 after:absolute after:hidden sm:after:block after:right-0 after:top-0 after:bottom-0 after:my-auto after:rounded-sm after:w-3 after:h-3 after:bg-surface-500 dark:after:bg-darksurface-500 hover:text-primary transition-colors cursor-pointer"><a href="#">لینک اول</a></li>
+                    <li class="sm:ps-6 relative mb-2 after:absolute after:hidden sm:after:block after:right-0 after:top-0 after:bottom-0 after:my-auto after:rounded-sm after:w-3 after:h-3 after:bg-surface-500 dark:after:bg-darksurface-500 hover:text-primary transition-colors cursor-pointer"><a href="#">لینک دوم</a></li>
+                    <li class="sm:ps-6 relative mb-2 after:absolute after:hidden sm:after:block after:right-0 after:top-0 after:bottom-0 after:my-auto after:rounded-sm after:w-3 after:h-3 after:bg-surface-500 dark:after:bg-darksurface-500 hover:text-primary transition-colors cursor-pointer"><a href="#">لینک سوم</a></li>
+                </ul>
+                <ul>
+                    <h4 class="text-lg mb-4">اطلاعات تماس</h4>
+                    <li class="sm:ps-6 relative mb-2 after:absolute after:hidden sm:after:block after:right-0 after:top-0 after:bottom-0 after:my-auto after:rounded-sm after:w-3 after:h-3 after:bg-surface-500 dark:after:bg-darksurface-500 ">09050495539</li>
+                    <li class="sm:ps-6 relative mb-2 after:absolute after:hidden sm:after:block after:right-0 after:top-0 after:bottom-0 after:my-auto after:rounded-sm after:w-3 after:h-3 after:bg-surface-500 dark:after:bg-darksurface-500 ">sobisare@gmail.com</li>
+                </ul>
+                <ul>
+                    <h4 class="text-lg mb-4 text-center">اعتماد</h4>
+                    <div class="footer-swiper relative overflow-hidden">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper w-24">
+                          <!-- Slides -->
+                          <a class="swiper-slide" href="#"><img src="images/enamad.png" alt="" class="w-full"></a>
+                          <a class="swiper-slide" href="#"><img src="images/zarinpal.png" alt="" class="w-full"></a>
+                        </div>
+                        <!-- If we need navigation buttons -->
+                        <div class="swiper-button-prev1 absolute left-0 w-4 h-4 bg-primary after:hidden"></div>
+                        <div class="swiper-button-next1 absolute right-0 w-4 h-4 bg-primary after:hidden"></div>
+                      </div>
+                </ul>
+               </div>
+               <p class="text-center text-xs md:mt-5 xl:m-0 border-t-2 border-surface-500 dark:border-darksurface-500 pt-2">© تمامی حقوق برای car tac محفوظ میباشد</p>
+            </div>
+        </div>
+    </footer>
     
     <script src="js/swiper-bundle.min.js"></script>
     <script>
@@ -643,6 +696,19 @@
                 delay:2500
             }
         });
+        const swiper2 = new Swiper('.footer-swiper', {
+                // Optional parameters
+                loop: true,
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction:false,
+                },
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
     </script>
     <script src="js/index.js"></script>
     </body>
