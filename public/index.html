@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl" class="dark">
+<html lang="en" dir="rtl" class="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,6 +73,12 @@
         <symbol id="telegram-icon" viewBox="0 0 100 100" fill="currentColor" class="size-6" xmlns="http://www.w3.org/2000/svg">
             <path d="M70.7373 29.3678C70.7373 29.3678 75.3626 27.5643 74.9772 31.9444C74.8487 33.748 73.6924 40.0605 72.793 46.8883L69.7094 67.1142C69.7094 67.1142 69.4525 70.0772 67.1398 70.5925C64.827 71.1078 61.3581 68.789 60.7156 68.2736C60.2017 67.8872 51.0795 62.0899 47.8674 59.2557C46.968 58.4828 45.9401 56.9368 47.9958 55.1332L61.4866 42.2506C63.0284 40.7047 64.5701 37.0975 58.146 41.4776L40.1585 53.7162C40.1585 53.7162 38.1027 55.0044 34.2483 53.845L25.8969 51.2685C25.8969 51.2685 22.8133 49.3361 28.0811 47.4036C40.9294 41.3487 56.7328 35.165 70.7373 29.3678Z" fill="currentColor"></path>
         </symbol>
+        <symbol id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        </symbol>
+        <symbol id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+        </symbol>          
     </svg>
     <header class="header fixed top-0 right-0 left-0 py-5 transition-all duration-500 z-30">
         <div class="container flex justify-between items-center text-textColor dark:text-darkTextColor font-morabba">
@@ -125,12 +131,27 @@
             <!-- overlay -->
             <div class="overlay nav-overlay sm:hidden duration-300 z-40 hide backdrop-blur-0"></div>
             <!-- hamburger -->
-            <div class="hamburger block sm:hidden py-3 px-2 border border-textColor dark:border-darkTextColor hover:border-textColor/80 hover:dark:border-darkTextColor/80 hover:text-textColor/80 hover:dark:text-darkTextColor/80 rounded-lg transition-all cursor-pointer">
-                <!-- lines -->
-                <span class="block relative w-4 h-1 rounded-full bg-textColor dark:bg-darkTextColor after:absolute after:w-4 after:h-1 after:-top-1.5 after:bg-textColor after:dark:bg-darkTextColor after:rounded-full before:absolute before:w-4 before:h-1 before:-bottom-1.5 before:bg-textColor before:dark:bg-darkTextColor before:rounded-full"></span>
-            </div>
-            <!-- support or admin panel -->
             <div class="flex gap-1">
+                <div class="hamburger flex items-center justify-center sm:hidden py-3 px-2 border border-textColor dark:border-darkTextColor hover:border-textColor/80 hover:dark:border-darkTextColor/80 hover:text-textColor/80 hover:dark:text-darkTextColor/80 rounded-lg transition-all cursor-pointer">
+                    <!-- lines -->
+                    <span class="block relative w-4 h-1 rounded-full bg-textColor dark:bg-darkTextColor after:absolute after:w-4 after:h-1 after:-top-1.5 after:bg-textColor after:dark:bg-darkTextColor after:rounded-full before:absolute before:w-4 before:h-1 before:-bottom-1.5 before:bg-textColor before:dark:bg-darkTextColor before:rounded-full"></span>
+                </div>
+                <div class="dark-light-toggle-btn sm:hidden cursor-pointer p-1 border border-textColor dark:border-darkTextColor hover:border-textColor/80 hover:dark:border-darkTextColor/80 hover:text-textColor/80 hover:dark:text-darkTextColor/80 rounded-lg transition-all">
+                    <svg class="w-6 h-6 dark:hidden"><use href="#moon-icon"></use></svg>
+                    <svg class="w-6 h-6 hidden dark:block"><use href="#sun-icon"></use></svg>
+                </div>
+            </div>
+            <!-- cartac mobile logo -->
+            <div class="text-xl font-bold sm:hidden flex gap-1">
+                <span class="block -rotate-[20deg] relative after:absolute after:w-px after:h-24 after:-right-4 after:bottom-3 after:bg-textColor dark:after:bg-darkTextColor after:rotate-[20deg]">کار</span>
+                <span class="block rotate-[20deg] relative after:absolute after:w-px after:h-24 after:-left-4 after:bottom-3 after:bg-textColor dark:after:bg-darkTextColor after:-rotate-[20deg]">تاک</span>
+            </div>
+            <!-- support and admin panel -->
+            <div class="flex gap-1 select-none">
+                <div class="dark-light-toggle-btn hidden sm:block cursor-pointer p-1 border border-textColor dark:border-darkTextColor hover:border-textColor/80 hover:dark:border-darkTextColor/80 hover:text-textColor/80 hover:dark:text-darkTextColor/80 rounded-lg transition-all">
+                    <svg class="w-6 h-6 dark:hidden"><use href="#moon-icon"></use></svg>
+                    <svg class="w-6 h-6 hidden dark:block"><use href="#sun-icon"></use></svg>
+                </div>
                 <a href="#" class="flex gap-1  py-1 px-2 border border-textColor dark:border-darkTextColor hover:border-textColor/80 hover:dark:border-darkTextColor/80 hover:text-textColor/80 hover:dark:text-darkTextColor/80 rounded-lg transition-all">
                     <span class="hidden md:block">پنل ادمین</span>
                     <svg class="w-6 h-6"><use href="#shield-icon"></use></svg>
@@ -139,9 +160,11 @@
                     <span class="hidden md:block">پشتیبانی</span>
                     <svg class="w-6 h-6"><use href="#support-icon"></use></svg>
                 </a>
+                
             </div>
         </div>
     </header>
+
     <!-- head section -->
     <section class="relative overflow-x-hidden overflow-y-visible pb-14">
         <div class="container z-10 relative flex flex-wrap">
@@ -639,6 +662,7 @@
         <img src="images/wave-abckward.svg" alt="" class="w-full dark:hidden">
         <img src="images/wave-abckward-dark.svg" alt="" class="w-full hidden dark:block">
     </section>
+
     <footer class="mt-20 mb-10 container">
         <!-- content -->
         <div class="w-11/12 border-2 border-surface-500 dark:border-darksurface-500 text-textColor dark:text-darkTextColor rounded-md mx-auto flex flex-col sm:flex-row ">
@@ -687,6 +711,7 @@
         </div>
     </footer>
     
+    <script src="js/dark-light-handler.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script>
         const swiper = new Swiper('.swiper', {
