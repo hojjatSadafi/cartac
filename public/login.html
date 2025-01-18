@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/output.css">
+</head>
+<body class="bg-background dark:bg-darkBackground min-h-screen flex justify-center items-start flex-col">
+    <svg class="hidden">
+        <symbol id="login-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15M12 9l-3 3m0 0 3 3m-3-3h12.75" />
+        </symbol>          
+    </svg>
+    <div class="container">
+        <!-- main box -->
+        <form class="min-w-72 flex flex-col gap-4 bg-surface-500 dark:bg-darksurface-500 mx-auto w-max text-textColor dark:text-darkTextColor px-6 py-5 rounded-3xl">
+            <svg class="mx-auto w-12 h-12 bg-background dark:bg-darkBackground rounded-full p-2"><use href="#login-icon"></use></svg>
+            <h2 class="text-center text-3xl">ورود</h2>
+            <!-- input -->
+            <div class="w-full bg-surface-400 dark:bg-darksurface-400 rounded-md px-2 pb-1">
+                <label for="mobile-inp" class="block text-right text-xs text-thinTextColor dark:text-darkThinTextColor">شماره تلفن</label>
+                <input id="mobile-inp" type="text" class="text-left bg-transparent outline-none border-none text-base w-full py-0.5" placeholder="09..." dir="ltr">
+            </div>
+            <div class="pr-2 flex gap-1">
+                <span>اکانت ندارید؟</span>
+                <a href="register.html" class="font-bold underline text-primary">ساخت اکانت</a>
+            </div>
+            <!-- btn -->
+            <button type="submit" class="border border-textColor dark:border-darkTextColor rounded-md w-full py-1 text-center hover:bg-textColor dark:hover:bg-darkTextColor hover:text-background dark:hover:text-darkBackground transition-all duration-200">ورود به حساب کاربری</button>
+        </form>
+    </div>
+
+    <script src="js/dark-light-handler.js"></script>
+</body>
+</html>
