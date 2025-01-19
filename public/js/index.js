@@ -61,4 +61,5 @@ popularSectionBtnWrapper.addEventListener('click',event=>{
 })
 headerDropdownBtn.addEventListener('click',()=>{
     headerDropdown.classList.toggle('hide')
+    headerDropdownBtn.children[2].classList.toggle('rotate-180')
 })
