@@ -62,4 +62,10 @@ popularSectionBtnWrapper.addEventListener('click',event=>{
 headerDropdownBtn.addEventListener('click',()=>{
     headerDropdown.classList.toggle('hide')
     headerDropdownBtn.children[2].classList.toggle('rotate-180')
+    if(!headerDropdown.classList.contains('hide')){
+        setTimeout(() => {
+            headerDropdown.classList.add('hide')
+            headerDropdownBtn.children[2].classList.remove('rotate-180')
+        }, 10000);
+    }
 })
