@@ -78,4 +78,7 @@
       .mobile-nav--active{
         @apply !right-0
       }
+      .panel-nav--active{
+        @apply text-textColor dark:text-darkTextColor border-b border-textColor dark:border-darkTextColor
+      }
 }
