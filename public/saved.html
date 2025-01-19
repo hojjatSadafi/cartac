@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/output.css">
+</head>
+<body class="container bg-background dark:bg-darkBackground min-h-screen">
+    <svg class="hidden">
+        <symbol id="user-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+        </symbol>
+        <symbol id="chevron-down-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </symbol>
+        <symbol id="support-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-headset">
+            <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z"/><path d="M21 16v2a4 4 0 0 1-4 4h-5"/>
+        </symbol>
+        <symbol id="shield-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield-ellipsis">
+            <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="M8 12h.01"/><path d="M12 12h.01"/><path d="M16 12h.01"/>
+        </symbol>
+        <symbol id="bookmark-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+        </symbol>
+        <symbol id="moon-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+        </symbol>
+        <symbol id="sun-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
+        </symbol>
+        <symbol id="log-out-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out">
+            <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/>
+        </symbol>
+        <symbol id="close-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </symbol>
+    </svg>
+    <header class="header fixed top-0 right-0 left-0 py-5 transition-all duration-500 z-30">
+        <div class="container flex justify-between items-center text-textColor dark:text-darkTextColor font-morabba">
+            <!-- login or account -->
+            <div class="hidden sm:block relative cursor-pointer select-none">
+                <div id="header-dropdown-btn" class="flex gap-1 items-center hover:text-textColor/80 dark:hover:text-darkTextColor/80 transition-all">
+                    <svg class="w-6 h-6"><use href="#user-icon"></use></svg>
+                    <span>حساب من</span>
+                    <svg class="w-6 h-6 transition-all duration-200"><use href="#chevron-down-icon"></use></svg>
+                </div>
+                <!-- dropdown -->
+                <div class="header-dropdown absolute top-[110%] left-0 w-full bg-surface-200 dark:bg-darksurface-500 p-1 rounded transition-all duration-200 hide">
+                    <span class="block text-sm text-center">حجت صدفی</span>
+                    <span class="block text-xs text-center text-thinTextColor dark:text-darkThinTextColor">09050495539</span>
+                        <a href="saved.html" class="flex items-center gap-1 hover:text-primary transition-all">
+                            <svg class="w-4 h-4"><use href="#bookmark-icon"></use></svg>
+                            <span>ذخیره ها</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-1 hover:text-red-500 transition-all">
+                            <svg class="w-4 h-4"><use href="#log-out-icon"></use></svg>
+                            <span>خروج</span>
+                        </a>
+                </div>
+            </div>
+            <!-- nav -->
+            <nav class="hidden sm:flex gap-6 font-bold">
+                <a href="#" class="hover:text-textColor/80 dark:hover:text-darkTextColor/80 transition-colors text-lg">خرید خودرو</a>
+                <a href="#" class="hover:text-textColor/80 dark:hover:text-darkTextColor/80 transition-colors text-lg">خرید موتور سیکلت</a>
+                <a href="#" class="hover:text-textColor/80 dark:hover:text-darkTextColor/80 transition-colors text-lg">درباره ما</a>
+            </nav>
+            <!-- mobile nav -->
+            <nav class="mobile-nav block transition-all sm:hidden space-y-2 fixed top-0 bottom-0 min-h-screen -right-96 pt-3 bg-surface-200 dark:bg-darksurface-500 z-50 rounded-e-xl">
+                <!-- close btn -->
+                <div href="#" class="mobile-nav__close-btn w-max mx-4 py-1 px-1.5 border border-textColor dark:border-darkTextColor hover:border-textColor/80 hover:dark:border-darkTextColor/80 hover:text-textColor/80 hover:dark:text-darkTextColor/80 rounded-xl transition-all cursor-pointer">
+                    <svg class="w-5 h-5"><use href="#close-icon"></use></svg>
+                </div>
+                <div class="my-account-dropdown relative">
+                    <!-- drop down body -->
+                    <div class="flex gap-1 cursor-pointer items-center hover:text-textColor/80 dark:hover:text-darkTextColor/80  transition-all mx-4">
+                        <svg class="w-5 h-5"><use href="#user-icon"></use></svg>
+                        <span>حساب من</span>
+                        <svg class="w-5 h-5"><use href="#chevron-down-icon"></use></svg>
+                    </div>
+                    <!-- drop down content -->
+                    <div class="w-full bg-surface-400 dark:bg-darksurface-400 px-4 pb2 pb-1">
+                        <span class="block text-sm text-center">حجت صدفی</span>
+                        <span class="block text-xs text-center text-thinTextColor dark:text-darkThinTextColor">09050495539</span>
+                        <a href="#" class="flex items-center gap-1">
+                            <svg class="w-4 h-4"><use href="#bookmark-icon"></use></svg>
+                            <span>ذخیره ها</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-1">
+                            <svg class="w-4 h-4"><use href="#log-out-icon"></use></svg>
+                            <span>خروج</span>
+                        </a>
+                    </div>
+                </div>
+                <a href="#" class="block hover:text-textColor/80 dark:hover:text-darkTextColor/80 transition-colors text-lg mx-4">خرید خودرو</a>
+                <a href="#" class="block hover:text-textColor/80 dark:hover:text-darkTextColor/80 transition-colors text-lg mx-4">خرید موتور سیکلت</a>
+                <a href="#" class="block hover:text-textColor/80 dark:hover:text-darkTextColor/80 transition-colors text-lg mx-4">درباره ما</a>
+            
+            </nav>
+            <!-- overlay -->
+            <div class="overlay nav-overlay sm:hidden duration-300 z-40 hide backdrop-blur-0"></div>
+            <!-- hamburger -->
+            <div class="flex gap-1 sm:hidden">
+                <div class="hamburger flex items-center justify-center py-3 px-2 border border-textColor dark:border-darkTextColor hover:border-textColor/80 hover:dark:border-darkTextColor/80 hover:text-textColor/80 hover:dark:text-darkTextColor/80 rounded-lg transition-all cursor-pointer">
+                    <!-- lines -->
+                    <span class="block relative w-4 h-1 rounded-full bg-textColor dark:bg-darkTextColor after:absolute after:w-4 after:h-1 after:-top-1.5 after:bg-textColor after:dark:bg-darkTextColor after:rounded-full before:absolute before:w-4 before:h-1 before:-bottom-1.5 before:bg-textColor before:dark:bg-darkTextColor before:rounded-full"></span>
+                </div>
+                <div class="dark-light-toggle-btn sm:hidden cursor-pointer p-1 border border-textColor dark:border-darkTextColor hover:border-textColor/80 hover:dark:border-darkTextColor/80 hover:text-textColor/80 hover:dark:text-darkTextColor/80 rounded-lg transition-all">
+                    <svg class="w-6 h-6 dark:hidden"><use href="#moon-icon"></use></svg>
+                    <svg class="w-6 h-6 hidden dark:block"><use href="#sun-icon"></use></svg>
+                </div>
+            </div>
+            <!-- cartac mobile logo -->
+            <div class="text-xl font-bold sm:hidden flex gap-1">
+                <span class="block -rotate-[20deg] relative after:absolute after:w-px after:h-24 after:-right-4 after:bottom-3 after:bg-textColor dark:after:bg-darkTextColor after:rotate-[20deg]">کار</span>
+                <span class="block rotate-[20deg] relative after:absolute after:w-px after:h-24 after:-left-4 after:bottom-3 after:bg-textColor dark:after:bg-darkTextColor after:-rotate-[20deg]">تاک</span>
+            </div>
+            <!-- support and admin panel -->
+            <div class="flex gap-1 select-none">
+                <div class="dark-light-toggle-btn hidden sm:block cursor-pointer p-1 border border-textColor dark:border-darkTextColor hover:border-textColor/80 hover:dark:border-darkTextColor/80 hover:text-textColor/80 hover:dark:text-darkTextColor/80 rounded-lg transition-all">
+                    <svg class="w-6 h-6 dark:hidden"><use href="#moon-icon"></use></svg>
+                    <svg class="w-6 h-6 hidden dark:block"><use href="#sun-icon"></use></svg>
+                </div>
+                <a href="#" class="flex gap-1  py-1 px-2 border border-textColor dark:border-darkTextColor hover:border-textColor/80 hover:dark:border-darkTextColor/80 hover:text-textColor/80 hover:dark:text-darkTextColor/80 rounded-lg transition-all">
+                    <span class="hidden md:block">پنل ادمین</span>
+                    <svg class="w-6 h-6"><use href="#shield-icon"></use></svg>
+                </a>
+                <a href="#" class="flex gap-1 py-1 px-2 border border-textColor dark:border-darkTextColor hover:border-textColor/80 hover:dark:border-darkTextColor/80 hover:text-textColor/80 hover:dark:text-darkTextColor/80 rounded-lg transition-all">
+                    <span class="hidden md:block">پشتیبانی</span>
+                    <svg class="w-6 h-6"><use href="#support-icon"></use></svg>
+                </a>
+                
+            </div>
+        </div>
+    </header>
+
+    <div class="mt-16 text-textColor dark:text-darkTextColor flex gap-2 items-center">
+        <svg class="w-10 h-10"><use href="#bookmark-icon"></use></svg>
+        <h2 class="text-2xl">ذخیره ها</h2>
+    </div>
+    <div class="grid grid-cols-[repeat(auto-fit,_minmax(250px,_auto))] mt-4 justify-center content-stretch gap-x-5 gap-y-10">
+        <!-- card's -->
+       
+        <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full self-stretch overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
+            <!-- image section -->
+            <div class="relative z-10 rounded-3xl overflow-hidden">
+                <a href="cardetail.html" class="block">
+                    <img src="images/pride.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
+                </a>
+                <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
+                    <svg class="w-6 h-6"><use href="#check-badge-icon"></use></svg>
+                    <span class="font-semibold text-xs">گارانتی هفت روزه سلامت</span>
+                </div>
+            </div>
+            <!-- title box -->
+            <div class="bg-gradient-to-b from-surface-200 to-surface-300 shadow dark:shadow-none dark:from-darksurface-500 dark:to-darksurface-300 rounded-b-3xl space-y-2 p-5 mx-5">
+                <div class="flex items-center gap-1">
+                    <div class="w-1 h-1 bg-green-500 rounded-full"></div>
+                    <span class="font-bold text-xs ms-1 text-green-500">موجود</span>
+
+                    <div class="w-1 h-1 bg-rose-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-rose-500 hidden">فروخته شده</span>
+
+                    <div class="w-1 h-1 bg-orange-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-orange-500 hidden">درحال معامله</span>
+                    
+                    <div class="w-1 h-1 bg-gray-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-gray-500 hidden">باطل شده</span>
+                </div>
+                <h2 class="font-bold text-sm">
+                    <a href="cardetail.html" class="inline-block transition-all hover:text-textColor/70 hover:dark:text-darkTextColor/70 font-morabba text-right">
+                        <span class="text-right">پراید</span>
+                        <div class="inline-block text-thinTextColor dark:text-darkThinTextColor mx-px">|</div>
+                        <span>1390</span>
+                    </a>
+                </h2>
+            </div>
+            <!-- box foot -->
+            <div class="space-y-3 p-5 flex flex-col justify-end mt-auto">
+                <div class="flex flex-wrap items-center gap-3 text-thinTextColor dark:text-darkThinTextColor">
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6">
+                        <use href="#radar-icon"></use>
+                        </svg>
+                        <span class="font-semibold text-xs">15,000</span>
+                        <span class="font-semibold text-xs">ک</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6">
+                            <use href="#clock-icon"></use>
+                        </svg>
+                        <span class="font-semibold text-xs">5 روز</span>
+                        <span class="font-semibold text-xs">پیش</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between gap-5">
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-surface-500 dark:bg-darksurface-300">
+                            <img src="images/Saipa_Logo.png" class="w-full object-cover" alt="..."/>
+                        </div>
+                        <div class="flex flex-col items-start space-y-1">
+                            <span class="line-clamp-1 font-semibold text-xs text-muted">برند</span>
+                            <a href="#" class="line-clamp-1 font-bold text-xs hover:text-primary transition-colors">سایپا</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end justify-center h-14">
+                        <span class="line-through text-thinTextColor dark:text-darkThinTextColor">۱,۱۹۹,۰۰۰</span>
+                        <div class="flex items-center gap-1 ">
+                            <span class="font-black text-lg">۱,۰۷۹,۰۰۰</span>
+                            <span class="text-xs text-thinTextColor dark:text-darkThinTextColor">تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-3">
+                    <a href="cardetail.html" class="w-full h-11 inline-flex items-center justify-center gap-1 bg-primary rounded-full text-zinc-300 transition-all hover:opacity-80 px-4">
+                        <span class="line-clamp-1 font-semibold text-sm">اطلاعات بیشتر</span>
+                        <svg class="w-6 h-6"><use href="#eye-icon"></use></svg>
+                    </a>
+                    <button type="button" class="flex-shrink-0 w-11 h-11 inline-flex items-center justify-center bg-surface-500 dark:bg-darksurface-300 rounded-full text-thinTextColor dark:text-darkThinTextColor transition-colors hover:text-primary">
+                        <svg class="w-6 h-6"><use href="#close-icon"></use></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full self-stretch overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
+            <!-- image section -->
+            <div class="relative z-10 rounded-3xl overflow-hidden">
+                <a href="cardetail.html" class="block">
+                    <img src="images/BMW-M8-Competition-1.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
+                </a>
+                <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
+                    <svg class="w-6 h-6"><use href="#check-badge-icon"></use></svg>
+                    <span class="font-semibold text-xs">گارانتی هفت روزه سلامت</span>
+                </div>
+            </div>
+            <!-- title box -->
+            <div class="bg-gradient-to-b from-surface-200 to-surface-300 shadow dark:shadow-none dark:from-darksurface-500 dark:to-darksurface-300 rounded-b-3xl space-y-2 p-5 mx-5">
+                <div class="flex items-center gap-1">
+                    <div class="w-1 h-1 bg-green-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-green-500 hidden">موجود</span>
+
+                    <div class="w-1 h-1 bg-rose-500 rounded-full"></div>
+                    <span class="font-bold text-xs ms-1 text-rose-500">فروخته شده</span>
+                    
+                    <div class="w-1 h-1 bg-orange-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-orange-500 hidden">درحال معامله</span>
+                    
+                    <div class="w-1 h-1 bg-gray-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-gray-500 hidden">باطل شده</span>
+                </div>
+                <h2 class="font-bold text-sm">
+                    <a href="cardetail.html" class="inline-block transition-all hover:text-textColor/70 hover:dark:text-darkTextColor/70 font-morabba text-right">
+                        <span class="text-right">bmw m8</span>
+                        <div class="inline-block text-thinTextColor dark:text-darkThinTextColor mx-px">|</div>
+                        <span>2020</span>
+                    </a>
+                </h2>
+            </div>
+            <!-- box foot -->
+            <div class="space-y-3 p-5 flex flex-col justify-end mt-auto">
+                <div class="flex flex-wrap items-center gap-3 text-thinTextColor dark:text-darkThinTextColor">
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6">
+                        <use href="#radar-icon"></use>
+                        </svg>
+                        <span class="font-semibold text-xs">15,000</span>
+                        <span class="font-semibold text-xs">ک</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6">
+                            <use href="#clock-icon"></use>
+                        </svg>
+                        <span class="font-semibold text-xs">5 روز</span>
+                        <span class="font-semibold text-xs">پیش</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between gap-5">
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-surface-500 dark:bg-darksurface-300">
+                            <img src="images/bmw-logo.jpg" class="w-full object-cover" alt="..."/>
+                        </div>
+                        <div class="flex flex-col items-start space-y-1">
+                            <span class="line-clamp-1 font-semibold text-xs text-muted">برند</span>
+                            <a href="#" class="line-clamp-1 font-bold text-xs hover:text-primary transition-colors">سایپا</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end justify-center h-14">
+                        <span class="line-through text-thinTextColor dark:text-darkThinTextColor">۱,۱۹۹,۰۰۰</span>
+                        <div class="flex items-center gap-1 ">
+                            <span class="font-black text-lg">۱,۰۷۹,۰۰۰</span>
+                            <span class="text-xs text-thinTextColor dark:text-darkThinTextColor">تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-3">
+                    <a href="cardetail.html" class="w-full h-11 inline-flex items-center justify-center gap-1 bg-primary rounded-full text-zinc-300 transition-all hover:opacity-80 px-4">
+                        <span class="line-clamp-1 font-semibold text-sm">اطلاعات بیشتر</span>
+                        <svg class="w-6 h-6"><use href="#eye-icon"></use></svg>
+                    </a>
+                    <button type="button" class="flex-shrink-0 w-11 h-11 inline-flex items-center justify-center bg-surface-500 dark:bg-darksurface-300 rounded-full text-thinTextColor dark:text-darkThinTextColor transition-colors hover:text-primary">
+                        <svg class="w-6 h-6"><use href="#close-icon"></use></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full self-stretch overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
+            <!-- image section -->
+            <div class="relative z-10 rounded-3xl overflow-hidden">
+                <a href="cardetail.html" class="block">
+                    <img src="images/benz.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
+                </a>
+                <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
+                    <svg class="w-6 h-6"><use href="#check-badge-icon"></use></svg>
+                    <span class="font-semibold text-xs">گارانتی هفت روزه سلامت</span>
+                </div>
+            </div>
+            <!-- title box -->
+            <div class="bg-gradient-to-b from-surface-200 to-surface-300 shadow dark:shadow-none dark:from-darksurface-500 dark:to-darksurface-300 rounded-b-3xl space-y-2 p-5 mx-5">
+                <div class="flex items-center gap-1">
+                    <div class="w-1 h-1 bg-green-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-green-500 hidden">موجود</span>
+
+                    <div class="w-1 h-1 bg-rose-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-rose-500 hidden">فروخته شده</span>
+                    
+                    <div class="w-1 h-1 bg-orange-500 rounded-full"></div>
+                    <span class="font-bold text-xs ms-1 text-orange-500">درحال معامله</span>
+                    
+                    <div class="w-1 h-1 bg-gray-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-gray-500 hidden">باطل شده</span>
+                </div>
+                <h2 class="font-bold text-sm">
+                    <a href="cardetail.html" class="inline-block transition-all hover:text-textColor/70 hover:dark:text-darkTextColor/70 font-morabba text-right">
+                        <span class="text-right">مرسدس سری s نو</span>
+                        <div class="inline-block text-thinTextColor dark:text-darkThinTextColor mx-px">|</div>
+                        <span>2022</span>
+                    </a>
+                </h2>
+            </div>
+            <!-- box foot -->
+            <div class="space-y-3 p-5 flex flex-col justify-end mt-auto">
+                <div class="flex flex-wrap items-center gap-3 text-thinTextColor dark:text-darkThinTextColor">
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6">
+                        <use href="#radar-icon"></use>
+                        </svg>
+                        <span class="font-semibold text-xs">15,000</span>
+                        <span class="font-semibold text-xs">ک</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6">
+                            <use href="#clock-icon"></use>
+                        </svg>
+                        <span class="font-semibold text-xs">5 روز</span>
+                        <span class="font-semibold text-xs">پیش</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between gap-5">
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-surface-500 dark:bg-darksurface-300">
+                            <img src="images/benz-logo.png" class="w-full object-cover" alt="..."/>
+                        </div>
+                        <div class="flex flex-col items-start space-y-1">
+                            <span class="line-clamp-1 font-semibold text-xs text-muted">برند</span>
+                            <a href="#" class="line-clamp-1 font-bold text-xs hover:text-primary transition-colors">سایپا</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end justify-center h-14">
+                        <span class="line-through text-thinTextColor dark:text-darkThinTextColor">۱,۱۹۹,۰۰۰</span>
+                        <div class="flex items-center gap-1 ">
+                            <span class="font-black text-lg">۱,۰۷۹,۰۰۰</span>
+                            <span class="text-xs text-thinTextColor dark:text-darkThinTextColor">تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-3">
+                    <a href="cardetail.html" class="w-full h-11 inline-flex items-center justify-center gap-1 bg-primary rounded-full text-zinc-300 transition-all hover:opacity-80 px-4">
+                        <span class="line-clamp-1 font-semibold text-sm">اطلاعات بیشتر</span>
+                        <svg class="w-6 h-6"><use href="#eye-icon"></use></svg>
+                    </a>
+                    <button type="button" class="flex-shrink-0 w-11 h-11 inline-flex items-center justify-center bg-surface-500 dark:bg-darksurface-300 rounded-full text-thinTextColor dark:text-darkThinTextColor transition-colors hover:text-primary">
+                        <svg class="w-6 h-6"><use href="#close-icon"></use></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full self-stretch overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
+            <!-- image section -->
+            <div class="relative z-10 rounded-3xl overflow-hidden">
+                <a href="cardetail.html" class="block">
+                    <img src="images/testImg.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
+                </a>
+                <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
+                    <svg class="w-6 h-6"><use href="#check-badge-icon"></use></svg>
+                    <span class="font-semibold text-xs">گارانتی هفت روزه سلامت</span>
+                </div>
+            </div>
+            <!-- title box -->
+            <div class="bg-gradient-to-b from-surface-200 to-surface-300 shadow dark:shadow-none dark:from-darksurface-500 dark:to-darksurface-300 rounded-b-3xl space-y-2 p-5 mx-5">
+                <div class="flex items-center gap-1">
+                    <div class="w-1 h-1 bg-green-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-green-500 hidden">موجود</span>
+
+                    <div class="w-1 h-1 bg-rose-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-rose-500 hidden">فروخته شده</span>
+                    
+                    <div class="w-1 h-1 bg-orange-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-orange-500 hidden">درحال معامله</span>
+                    
+                    <div class="w-1 h-1 bg-gray-500 rounded-full"></div>
+                    <span class="font-bold text-xs ms-1 text-gray-500">باطل شده</span>
+                </div>
+                <h2 class="font-bold text-sm">
+                    <a href="cardetail.html" class="inline-block transition-all hover:text-textColor/70 hover:dark:text-darkTextColor/70 font-morabba text-right">
+                        <span class="text-right">سمند کار نکرده</span>
+                        <div class="inline-block text-thinTextColor dark:text-darkThinTextColor mx-px">|</div>
+                        <span>1400</span>
+                    </a>
+                </h2>
+            </div>
+            <!-- box foot -->
+            <div class="space-y-3 p-5 flex flex-col justify-end mt-auto">
+                <div class="flex flex-wrap items-center gap-3 text-thinTextColor dark:text-darkThinTextColor">
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6">
+                        <use href="#radar-icon"></use>
+                        </svg>
+                        <span class="font-semibold text-xs">15,000</span>
+                        <span class="font-semibold text-xs">ک</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6">
+                            <use href="#clock-icon"></use>
+                        </svg>
+                        <span class="font-semibold text-xs">5 روز</span>
+                        <span class="font-semibold text-xs">پیش</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between gap-5">
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-surface-500 dark:bg-darksurface-300">
+                            <img src="images/Saipa_Logo.png" class="w-full object-cover" alt="..."/>
+                        </div>
+                        <div class="flex flex-col items-start space-y-1">
+                            <span class="line-clamp-1 font-semibold text-xs text-muted">برند</span>
+                            <a href="#" class="line-clamp-1 font-bold text-xs hover:text-primary transition-colors">سایپا</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end justify-center h-14">
+                        <span class="line-through text-thinTextColor dark:text-darkThinTextColor">۱,۱۹۹,۰۰۰</span>
+                        <div class="flex items-center gap-1 ">
+                            <span class="font-black text-lg">۱,۰۷۹,۰۰۰</span>
+                            <span class="text-xs text-thinTextColor dark:text-darkThinTextColor">تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-3">
+                    <a href="cardetail.html" class="w-full h-11 inline-flex items-center justify-center gap-1 bg-primary rounded-full text-zinc-300 transition-all hover:opacity-80 px-4">
+                        <span class="line-clamp-1 font-semibold text-sm">اطلاعات بیشتر</span>
+                        <svg class="w-6 h-6"><use href="#eye-icon"></use></svg>
+                    </a>
+                    <button type="button" class="flex-shrink-0 w-11 h-11 inline-flex items-center justify-center bg-surface-500 dark:bg-darksurface-300 rounded-full text-thinTextColor dark:text-darkThinTextColor transition-colors hover:text-primary">
+                        <svg class="w-6 h-6"><use href="#close-icon"></use></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col relative max-w-72 flex-shrink flex-grow group h-full self-stretch overflow-hidden rounded-3xl bg-surface-100 dark:bg-darksurface-500 text-textColor dark:text-darkTextColor">
+            <!-- image section -->
+            <div class="relative z-10 rounded-3xl overflow-hidden">
+                <a href="cardetail.html" class="block">
+                    <img src="images/benz.jpg" class="w-full max-h-48 group-hover:scale-110 transition-all duration-300" alt="..."/>
+                </a>
+                <div href="#" class="absolute right-3 top-3 px-4 py-1 inline-flex items-center justify-center gap-1 bg-black/40 rounded-full text-zinc-300 animate-pulse">
+                    <svg class="w-6 h-6"><use href="#check-badge-icon"></use></svg>
+                    <span class="font-semibold text-xs">گارانتی هفت روزه سلامت</span>
+                </div>
+            </div>
+            <!-- title box -->
+            <div class="bg-gradient-to-b from-surface-200 to-surface-300 shadow dark:shadow-none dark:from-darksurface-500 dark:to-darksurface-300 rounded-b-3xl space-y-2 p-5 mx-5">
+                <div class="flex items-center gap-1">
+                    <div class="w-1 h-1 bg-green-500 rounded-full"></div>
+                    <span class="font-bold text-xs ms-1 text-green-500">موجود</span>
+
+                    <div class="w-1 h-1 bg-rose-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-rose-500 hidden">فروخته شده</span>
+                    
+                    <div class="w-1 h-1 bg-orange-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-orange-500 hidden">درحال معامله</span>
+                    
+                    <div class="w-1 h-1 bg-gray-500 rounded-full hidden"></div>
+                    <span class="font-bold text-xs ms-1 text-gray-500 hidden">باطل شده</span>
+                </div>
+                <h2 class="font-bold text-sm">
+                    <a href="cardetail.html" class="inline-block transition-all hover:text-textColor/70 hover:dark:text-darkTextColor/70 font-morabba text-right">
+                        <span class="text-right">مرسدس سری s نو</span>
+                        <div class="inline-block text-thinTextColor dark:text-darkThinTextColor mx-px">|</div>
+                        <span>2022</span>
+                    </a>
+                </h2>
+            </div>
+            <!-- box foot -->
+            <div class="space-y-3 p-5 flex flex-col justify-end mt-auto">
+                <div class="flex flex-wrap items-center gap-3 text-thinTextColor dark:text-darkThinTextColor">
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6">
+                        <use href="#radar-icon"></use>
+                        </svg>
+                        <span class="font-semibold text-xs">15,000</span>
+                        <span class="font-semibold text-xs">ک</span>
+                    </div>
+                    <div class="flex items-center gap-1">
+                        <svg class="w-6 h-6">
+                            <use href="#clock-icon"></use>
+                        </svg>
+                        <span class="font-semibold text-xs">5 روز</span>
+                        <span class="font-semibold text-xs">پیش</span>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between gap-5">
+                    <div class="flex items-center gap-3">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-full overflow-hidden flex items-center justify-center bg-surface-500 dark:bg-darksurface-300">
+                            <img src="images/Saipa_Logo.png" class="w-full object-cover" alt="..."/>
+                        </div>
+                        <div class="flex flex-col items-start space-y-1">
+                            <span class="line-clamp-1 font-semibold text-xs text-muted">برند</span>
+                            <a href="#" class="line-clamp-1 font-bold text-xs hover:text-primary transition-colors">سایپا</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-end justify-center h-14">
+                        <span class="line-through text-thinTextColor dark:text-darkThinTextColor">۱,۱۹۹,۰۰۰</span>
+                        <div class="flex items-center gap-1 ">
+                            <span class="font-black text-lg">۱,۰۷۹,۰۰۰</span>
+                            <span class="text-xs text-thinTextColor dark:text-darkThinTextColor">تومان</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-3 mt-3">
+                    <a href="cardetail.html" class="w-full h-11 inline-flex items-center justify-center gap-1 bg-primary rounded-full text-zinc-300 transition-all hover:opacity-80 px-4">
+                        <span class="line-clamp-1 font-semibold text-sm">اطلاعات بیشتر</span>
+                        <svg class="w-6 h-6"><use href="#eye-icon"></use></svg>
+                    </a>
+                    <button type="button" class="flex-shrink-0 w-11 h-11 inline-flex items-center justify-center bg-surface-500 dark:bg-darksurface-300 rounded-full text-thinTextColor dark:text-darkThinTextColor transition-colors hover:text-primary">
+                        <svg class="w-6 h-6"><use href="#close-icon"></use></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <script src="js/dark-light-handler.js"></script>
+    <script src="js/header.js"></script>
+</body>
+</html>
