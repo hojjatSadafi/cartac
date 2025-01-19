@@ -5,6 +5,8 @@ const hamburger = document.querySelector('.hamburger')
 const navOverlay = document.querySelector('.nav-overlay')
 const popularSectionBtnWrapper = document.getElementById('popularSectionBtnWrapper')
 const cardWrapperContainer = document.querySelector('.card-wrapper-container')
+const headerDropdownBtn = document.getElementById('header-dropdown-btn')
+const headerDropdown = document.querySelector('.header-dropdown')
 
 window.addEventListener('scroll',event=>{
     if(document.documentElement.scrollTop){
@@ -56,4 +58,7 @@ popularSectionBtnWrapper.addEventListener('click',event=>{
         clickedElem.classList.add('text-primary')
         popularSectionActiveHandler(clickedId)
     }
+})
+headerDropdownBtn.addEventListener('click',()=>{
+    headerDropdown.classList.toggle('hide')
 })

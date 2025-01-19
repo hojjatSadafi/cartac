@@ -2177,9 +2177,9 @@ body{
   font-family: Moul;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .text-9xl {
@@ -2210,11 +2210,6 @@ body{
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-black {
@@ -2409,6 +2404,10 @@ body{
   transition-duration: 150ms;
 }
 
+.duration-200 {
+  transition-duration: 200ms;
+}
+
 .duration-300 {
   transition-duration: 300ms;
 }
@@ -2417,8 +2416,8 @@ body{
   transition-duration: 500ms;
 }
 
-.duration-200 {
-  transition-duration: 200ms;
+.duration-700 {
+  transition-duration: 700ms;
 }
 
 .before\:absolute::before {
@@ -2640,6 +2639,11 @@ body{
   background-color: rgb(41 37 36 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:text-background:hover {
+  --tw-text-opacity: 1;
+  color: rgb(238 238 238 / var(--tw-text-opacity, 1));
+}
+
 .hover\:text-primary:hover {
   --tw-text-opacity: 1;
   color: rgb(76 175 80 / var(--tw-text-opacity, 1));
@@ -2658,9 +2662,14 @@ body{
   color: rgb(41 37 36 / 0.8);
 }
 
-.hover\:text-background:hover {
+.hover\:text-red-50:hover {
   --tw-text-opacity: 1;
-  color: rgb(238 238 238 / var(--tw-text-opacity, 1));
+  color: rgb(254 242 242 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-red-500:hover {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity, 1));
 }
 
 .hover\:opacity-80:hover {
@@ -3212,6 +3221,11 @@ body{
   background-color: rgb(236 223 204 / var(--tw-bg-opacity, 1));
 }
 
+.dark\:hover\:text-darkBackground:hover:where(.dark, .dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(18 18 18 / var(--tw-text-opacity, 1));
+}
+
 .dark\:hover\:text-darkTextColor\/80:hover:where(.dark, .dark *) {
   color: rgb(236 223 204 / 0.8);
 }
@@ -3227,11 +3241,6 @@ body{
 
 .hover\:dark\:text-darkTextColor\/80:where(.dark, .dark *):hover {
   color: rgb(236 223 204 / 0.8);
-}
-
-.dark\:hover\:text-darkBackground:hover:where(.dark, .dark *) {
-  --tw-text-opacity: 1;
-  color: rgb(18 18 18 / var(--tw-text-opacity, 1));
 }
 
 @media (min-width: 640px) {

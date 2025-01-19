@@ -83,12 +83,25 @@
     <header class="header fixed top-0 right-0 left-0 py-5 transition-all duration-500 z-30">
         <div class="container flex justify-between items-center text-textColor dark:text-darkTextColor font-morabba">
             <!-- login or account -->
-            <div class="hidden sm:flex gap-1 relative cursor-pointer items-center hover:text-textColor/80 dark:hover:text-darkTextColor/80  transition-all">
-                <svg class="w-6 h-6"><use href="#user-icon"></use></svg>
-                <span>حساب من</span>
-                <svg class="w-6 h-6"><use href="#chevron-down-icon"></use></svg>
+            <div class="hidden sm:block relative cursor-pointer select-none">
+                <div id="header-dropdown-btn" class="flex gap-1 items-center hover:text-textColor/80 dark:hover:text-darkTextColor/80 transition-all">
+                    <svg class="w-6 h-6"><use href="#user-icon"></use></svg>
+                    <span>حساب من</span>
+                    <svg class="w-6 h-6"><use href="#chevron-down-icon"></use></svg>
+                </div>
                 <!-- dropdown -->
-                 <div class="absolute bg-surface-200 dark:bg-darksurface-500"></div>
+                <div class="header-dropdown absolute top-[110%] left-0 bg-surface-200 dark:bg-darksurface-500 p-1 rounded transition-all duration-200 hide">
+                    <span class="block text-sm text-center">حجت صدفی</span>
+                    <span class="block text-xs text-center text-thinTextColor dark:text-darkThinTextColor">09050495539</span>
+                        <a href="saved.html" class="flex items-center gap-1 hover:text-primary transition-all">
+                            <svg class="w-4 h-4"><use href="#bookmark-icon"></use></svg>
+                            <span>ذخیره ها</span>
+                        </a>
+                        <a href="#" class="flex items-center gap-1 hover:text-red-500 transition-all">
+                            <svg class="w-4 h-4"><use href="#log-out-icon"></use></svg>
+                            <span>خروج</span>
+                        </a>
+                </div>
             </div>
             <!-- nav -->
             <nav class="hidden sm:flex gap-6 font-bold">
