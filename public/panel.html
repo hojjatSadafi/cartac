@@ -32,6 +32,18 @@
         </symbol>
         <symbol id="banknote-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+        </symbol>
+        <symbol id="trash-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+        </symbol>
+        <symbol id="cog-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12a7.5 7.5 0 0 0 15 0m-15 0a7.5 7.5 0 1 1 15 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077 1.41-.513m14.095-5.13 1.41-.513M5.106 17.785l1.15-.964m11.49-9.642 1.149-.964M7.501 19.795l.75-1.3m7.5-12.99.75-1.3m-6.063 16.658.26-1.477m2.605-14.772.26-1.477m0 17.726-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205 12 12m6.894 5.785-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
+        </symbol>
+        <symbol id="search-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </symbol>
+        <symbol id="plus-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
         </symbol>          
     </svg>
     <!-- top card -->
@@ -108,18 +120,363 @@
             </div>
         </div>
         </div>
-        <nav class="flex gap-2 sm:gap-5 text-thinTextColor dark:text-darkThinTextColor text-xs sm:text-base">
-            <span class="cursor-pointer panel-nav--active">لیست آگهی ها</span>
-            <span class="cursor-pointer">لیست برند ها</span>
-            <span class="cursor-pointer">لیست کاربران</span>
-            <span class="cursor-pointer">لیست تراکنش</span>
+        <nav id="panel-nav-wrapper" class="flex gap-2 sm:gap-5 select-none text-thinTextColor dark:text-darkThinTextColor text-xs sm:text-base">
+            <span class="cursor-pointer panel-nav panel-nav--active" data-content="advertisement">لیست آگهی ها</span>
+            <span class="cursor-pointer panel-nav" data-content="brand">لیست برند ها</span>
+            <span class="cursor-pointer panel-nav" data-content="users">لیست کاربران</span>
+            <span class="cursor-pointer panel-nav" data-content="transaction">لیست تراکنش</span>
         </nav>
     </section>
+    <!-- search section -->
+    <section class="container my-10 flex gap-5 flex-wrap justify-center sm:justify-start text-textColor dark:text-darkTextColor">
+        <!-- search inp -->
+        <div class="flex items-center gap-1 rounded-lg border border-textColor dark:border-darkTextColor px-0.5 w-max max-w-72">
+            <a href="#"><svg class="w-7 h-7 stroke-2"><use href="#search-icon"></use></svg></a>
+            <input type="text" placeholder="جستجو" class="border-none outline-none bg-transparent text-base py-1.5 w-max">
+        </div>
+        <a href="#" class="flex items-center justify-between gap-3 rounded-lg border border-textColor dark:border-darkTextColor px-2 py-1.5">
+            <span class="text-lg font-bold">آگهی</span>
+            <svg class="w-7 h-7 stroke-2"><use href="#plus-icon"></use></svg>
+        </a>
+        <a href="#" class="flex items-center justify-between gap-3 rounded-lg border border-textColor dark:border-darkTextColor px-2 py-1.5">
+            <span class="text-lg font-bold">برند</span>
+            <svg class="w-7 h-7 stroke-2"><use href="#plus-icon"></use></svg>
+        </a>
+    </section>
+    <!-- advertisement table -->
+    <div class="container overflow-x-auto customScrollX" id="tableContainer">
+        <table id="advertisement" class="text-nowrap text-textColor dark:text-darkTextColor min-w-full text-right">
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <th class="p-1">شناسه</th>
+                <th class="p-1">عنوان</th>
+                <th class="p-1">مدل</th>
+                <th class="p-1">تاریخ انتشار</th>
+                <th class="p-1">قیمت</th>
+                <th class="p-1">وضعیت بدنه</th>
+                <th class="p-1">برند</th>
+                <th class="p-1">کارکرد</th>
+                <th class="p-1">رنگ بدنه</th>
+                <th class="p-1">بیمه</th>
+                <th class="p-1">وضعیت</th>
+                <th class="p-1">ویرایش</th>
+                <th class="p-1">حذف</th>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">02</td>
+                <td class="px-1 py-3"><a href="">کادیلاک قدیمی</a></td>
+                <td class="px-1 py-3">1995</td>
+                <td class="px-1 py-3">1403/2/1</td>
+                <td class="px-1 py-3">300000000</td>
+                <td class="px-1 py-3">بدون رنگ</td>
+                <td class="px-1 py-3">cadillac</td>
+                <td class="px-1 py-3">600000</td>
+                <td class="px-1 py-3">قهوه ای</td>
+                <td class="px-1 py-3">ندارد</td>
+                <td class="px-1 py-3">
+                    <span class="border border-primary text-primary px-2 py-0.5 rounded">موجود</span>
+                    <!-- <span class="border border-rose-500 text-rose-500 px-2 py-0.5 rounded">فروخته شده</span> -->
+                    <!-- <span class="border border-orange-500 text-orange-500 px-2 py-0.5 rounded">درحال معامله</span> -->
+                    <!-- <span class="border border-gray-500 text-gray-500 px-2 py-0.5 rounded">باطل شده</span> -->
+                </td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">03</td>
+                <td class="px-1 py-3"><a href="">پورشه 911</a></td>
+                <td class="px-1 py-3">2022</td>
+                <td class="px-1 py-3">1403/3/3</td>
+                <td class="px-1 py-3">6200000000</td>
+                <td class="px-1 py-3">بدون رنگ</td>
+                <td class="px-1 py-3">porche</td>
+                <td class="px-1 py-3">0</td>
+                <td class="px-1 py-3">زرد</td>
+                <td class="px-1 py-3">ندارد</td>
+                <td class="px-1 py-3">
+                    <!-- <span class="border border-primary text-primary px-2 py-0.5 rounded">موجود</span> -->
+                    <span class="border border-rose-500 text-rose-500 px-2 py-0.5 rounded">فروخته شده</span>
+                    <!-- <span class="border border-orange-500 text-orange-500 px-2 py-0.5 rounded">درحال معامله</span> -->
+                    <!-- <span class="border border-gray-500 text-gray-500 px-2 py-0.5 rounded">باطل شده</span> -->
+                </td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">04</td>
+                <td class="px-1 py-3"><a href="">BMW M8</a></td>
+                <td class="px-1 py-3">2025</td>
+                <td class="px-1 py-3">1403/10/1</td>
+                <td class="px-1 py-3">5000000000</td>
+                <td class="px-1 py-3">بدون رنگ</td>
+                <td class="px-1 py-3">BMW</td>
+                <td class="px-1 py-3">100</td>
+                <td class="px-1 py-3">مشکی</td>
+                <td class="px-1 py-3">شش ماهه شخص ثالث</td>
+                <td class="px-1 py-3">
+                    <span class="border border-primary text-primary px-2 py-0.5 rounded">موجود</span>
+                    <!-- <span class="border border-rose-500 text-rose-500 px-2 py-0.5 rounded">فروخته شده</span> -->
+                    <!-- <span class="border border-orange-500 text-orange-500 px-2 py-0.5 rounded">درحال معامله</span> -->
+                    <!-- <span class="border border-gray-500 text-gray-500 px-2 py-0.5 rounded">باطل شده</span> -->
+                </td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">05</td>
+                <td class="px-1 py-3"><a href="">پراید</a></td>
+                <td class="px-1 py-3">1390</td>
+                <td class="px-1 py-3">1403/2/1</td>
+                <td class="px-1 py-3">200000000</td>
+                <td class="px-1 py-3">رنگ شده</td>
+                <td class="px-1 py-3">saipa</td>
+                <td class="px-1 py-3">1200000</td>
+                <td class="px-1 py-3">سفید</td>
+                <td class="px-1 py-3">یک ساله</td>
+                <td class="px-1 py-3">
+                    <!-- <span class="border border-primary text-primary px-2 py-0.5 rounded">موجود</span> -->
+                    <!-- <span class="border border-rose-500 text-rose-500 px-2 py-0.5 rounded">فروخته شده</span> -->
+                    <!-- <span class="border border-orange-500 text-orange-500 px-2 py-0.5 rounded">درحال معامله</span> -->
+                    <span class="border border-gray-500 text-gray-500 px-2 py-0.5 rounded">باطل شده</span>
+                </td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">06</td>
+                <td class="px-1 py-3"><a href="">بی ام و سری i</a></td>
+                <td class="px-1 py-3">2025</td>
+                <td class="px-1 py-3">1403/10/20</td>
+                <td class="px-1 py-3">25000000000</td>
+                <td class="px-1 py-3">بدون رنگ</td>
+                <td class="px-1 py-3">BMW</td>
+                <td class="px-1 py-3">0</td>
+                <td class="px-1 py-3">آبی سفید</td>
+                <td class="px-1 py-3">ندارد</td>
+                <td class="px-1 py-3">
+                    <!-- <span class="border border-primary text-primary px-2 py-0.5 rounded">موجود</span> -->
+                    <!-- <span class="border border-rose-500 text-rose-500 px-2 py-0.5 rounded">فروخته شده</span> -->
+                    <span class="border border-orange-500 text-orange-500 px-2 py-0.5 rounded">درحال معامله</span>
+                    <!-- <span class="border border-gray-500 text-gray-500 px-2 py-0.5 rounded">باطل شده</span> -->
+                </td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">07</td>
+                <td class="px-1 py-3"><a href="">بنز g class</a></td>
+                <td class="px-1 py-3">2019</td>
+                <td class="px-1 py-3">1400/2/1</td>
+                <td class="px-1 py-3">44000000000</td>
+                <td class="px-1 py-3">رنگ شده</td>
+                <td class="px-1 py-3">BENZ</td>
+                <td class="px-1 py-3">3000</td>
+                <td class="px-1 py-3">مشکی</td>
+                <td class="px-1 py-3">ندارد</td>
+                <td class="px-1 py-3">
+                    <!-- <span class="border border-primary text-primary px-2 py-0.5 rounded">موجود</span> -->
+                    <!-- <span class="border border-rose-500 text-rose-500 px-2 py-0.5 rounded">فروخته شده</span> -->
+                    <span class="border border-orange-500 text-orange-500 px-2 py-0.5 rounded">درحال معامله</span>
+                    <!-- <span class="border border-gray-500 text-gray-500 px-2 py-0.5 rounded">باطل شده</span> -->
+                </td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+        </table>
+        <table id="brand" class="hidden text-nowrap text-textColor dark:text-darkTextColor min-w-full text-right">
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <th class="py-1 px-2">شناسه</th>
+                <th class="py-1 px-2">عنوان</th>
+                <th class="py-1 px-2">تاریخ انتشار</th>
+                <th class="py-1 px-2">عکس برند</th>
+                <th class="py-1 px-2">فعال است</th>
+                <th class="py-1 px-2 w-1/3">حذف شده</th>
+                <th class="py-1 px-2">وضعیت</th>
+                <th class="py-1 px-2 text-center">ویرایش</th>
+                <th class="py-1 px-2 text-center">حذف</th>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">01</td>
+                <td class="px-1 py-3">BMW</td>
+                <td class="px-1 py-3">1403/2/1</td>
+                <td class="px-1 py-3">
+                    <div class="bg-surface-500 dark:bg-darksurface-500 w-10 h-10 rounded-full overflow-hidden p-1 flex items-center justify-center"><img src="images/car-logo/BMW_logo_(gray).svg.png" alt="" class=""></div>
+                </td>
+                <td class="px-1 py-3"><span class="border border-primary text-primary px-5 py-0.5 rounded">بله</span></td>
+                <td class="px-1 py-3"><span class="border border-rose-500 text-rose-500 px-5 py-0.5 rounded">خیر</span></td>
 
+                <td class="px-1 py-3">
+                    <span class="border border-primary text-primary px-2 py-0.5 rounded">تایید شده</span>
+                </td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">01</td>
+                <td class="px-1 py-3">BENZ</td>
+                <td class="px-1 py-3">1403/2/1</td>
+                <td class="px-1 py-3">
+                    <div class="bg-surface-500 dark:bg-darksurface-500 w-10 h-10 rounded-full overflow-hidden p-1 flex items-center justify-center"><img src="images/car-logo/Mercedes-Benz_Star_2022.svg.png" alt="" class=""></div>
+                </td>
+                <td class="px-1 py-3"><span class="border border-rose-500 text-rose-500 px-5 py-0.5 rounded">خیر</span></td>
+                <td class="px-1 py-3"><span class="border border-primary text-primary px-5 py-0.5 rounded">بله</span></td>
+
+                <td class="px-1 py-3">
+                    <span class="border border-primary text-primary px-2 py-0.5 rounded">تایید شده</span>
+                </td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">01</td>
+                <td class="px-1 py-3">SAIPA</td>
+                <td class="px-1 py-3">1403/2/1</td>
+                <td class="px-1 py-3">
+                    <div class="bg-surface-500 dark:bg-darksurface-500 w-10 h-10 rounded-full overflow-hidden p-1 flex items-center justify-center"><img src="images/car-logo/Saipa-logo-2560x1440.png" alt="" class=""></div>
+                </td>
+                <td class="px-1 py-3"><span class="border border-primary text-primary px-5 py-0.5 rounded">بله</span></td>
+                <td class="px-1 py-3"><span class="border border-rose-500 text-rose-500 px-5 py-0.5 rounded">خیر</span></td>
+
+                <td class="px-1 py-3">
+                    <span class="border border-primary text-primary px-2 py-0.5 rounded">تایید شده</span>
+                </td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">01</td>
+                <td class="px-1 py-3">PEUGEOT</td>
+                <td class="px-1 py-3">1403/2/1</td>
+                <td class="px-1 py-3">
+                    <div class="bg-surface-500 dark:bg-darksurface-500 w-10 h-10 rounded-full overflow-hidden p-1 flex items-center justify-center"><img src="images/car-logo/peugeot-logo.png" alt="" class=""></div>
+                </td>
+                <td class="px-1 py-3"><span class="border border-primary text-primary px-5 py-0.5 rounded">بله</span></td>
+                <td class="px-1 py-3"><span class="border border-rose-500 text-rose-500 px-5 py-0.5 rounded">خیر</span></td>
+
+                <td class="px-1 py-3">
+                    <span class="border border-primary text-primary px-2 py-0.5 rounded">تایید شده</span>
+                </td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">01</td>
+                <td class="px-1 py-3">NISSAN</td>
+                <td class="px-1 py-3">1403/2/1</td>
+                <td class="px-1 py-3">
+                    <div class="bg-surface-500 dark:bg-darksurface-500 w-10 h-10 rounded-full overflow-hidden p-1 flex items-center justify-center"><img src="images/car-logo/Nissan_2020_logo.svg.png" alt="" class=""></div>
+                </td>
+                <td class="px-1 py-3"><span class="border border-primary text-primary px-5 py-0.5 rounded">بله</span></td>
+                <td class="px-1 py-3"><span class="border border-rose-500 text-rose-500 px-5 py-0.5 rounded">خیر</span></td>
+
+                <td class="px-1 py-3">
+                    <span class="border border-primary text-primary px-2 py-0.5 rounded">تایید شده</span>
+                </td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+        </table>
+        <table id="users" class="hidden text-nowrap text-textColor dark:text-darkTextColor min-w-full text-right">
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <th class="py-1 px-2">شناسه</th>
+                <th class="py-1 px-2">نام کاربر</th>
+                <th class="py-1 px-2">مدیر</th>
+                <th class="py-1 px-2">آخرین ورود</th>
+                <th class="py-1 px-2 w-1/3">شماره تلفن</th>
+                <th class="py-1 px-2 text-center">ویرایش</th>
+                <th class="py-1 px-2 text-center">حذف</th>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">02</td>
+                <td class="px-1 py-3">بهرام حلیمی</td>
+                <td class="px-1 py-3"><span class="border border-rose-500 text-rose-500 px-5 py-0.5 rounded">خیر</span></td>
+                <td class="px-1 py-3">1403/2/1-20:22</td>
+                <td class="px-1 py-3">09050447589</td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">03</td>
+                <td class="px-1 py-3">سلمان فرعی</td>
+                <td class="px-1 py-3"><span class="border border-rose-500 text-rose-500 px-5 py-0.5 rounded">خیر</span></td>
+                <td class="px-1 py-3">1403/2/1-20:22</td>
+                <td class="px-1 py-3">09050445589</td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">04</td>
+                <td class="px-1 py-3">فرهاد جمالی</td>
+                <td class="px-1 py-3"><span class="border border-rose-500 text-rose-500 px-5 py-0.5 rounded">خیر</span></td>
+                <td class="px-1 py-3">1403/2/1-20:22</td>
+                <td class="px-1 py-3">09050445589</td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">05</td>
+                <td class="px-1 py-3">نریمان صبوری</td>
+                <td class="px-1 py-3"><span class="border border-rose-500 text-rose-500 px-5 py-0.5 rounded">خیر</span></td>
+                <td class="px-1 py-3">1403/2/1-20:22</td>
+                <td class="px-1 py-3">09050445589</td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">06</td>
+                <td class="px-1 py-3">شهاب سنگی</td>
+                <td class="px-1 py-3"><span class="border border-rose-500 text-rose-500 px-5 py-0.5 rounded">خیر</span></td>
+                <td class="px-1 py-3">1403/2/1-20:22</td>
+                <td class="px-1 py-3">09050445589</td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">07</td>
+                <td class="px-1 py-3">سیبز امینی</td>
+                <td class="px-1 py-3"><span class="border border-primary text-primary px-5 py-0.5 rounded">بله</span></td>
+                <td class="px-1 py-3">1403/2/1-20:22</td>
+                <td class="px-1 py-3">09050445589</td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">08</td>
+                <td class="px-1 py-3">علی سرنامی</td>
+                <td class="px-1 py-3"><span class="border border-rose-500 text-rose-500 px-5 py-0.5 rounded">خیر</span></td>
+                <td class="px-1 py-3">1403/2/1-20:22</td>
+                <td class="px-1 py-3">09050445589</td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#cog-icon"></use></svg></a></td>
+                <td class="px-1 py-3"><a href="#" class="block"><svg class="w-6 h-6 mx-auto"><use href="#trash-icon"></use></svg></a></td>
+            </tr>
+        </table>
+        <table id="transaction" class="hidden text-nowrap text-textColor dark:text-darkTextColor min-w-full text-right">
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <th class="py-1 px-2">شناسه</th>
+                <th class="py-1 px-2">شناسه خریدار</th>
+                <th class="py-1 px-2">شناسه ماشین</th>
+                <th class="py-1 px-2">نام ماشین</th>
+                <th class="py-1 px-2">نام خریدار</th>
+                <th class="py-1 px-2">شماره تلفن خریدار</th>
+                <th class="py-1 px-2">مبلغ</th>
+                <th class="py-1 px-2">تاریخ تراکنش</th>
+            </tr>
+            <tr class="border-b border-surface-500 dark:border-darksurface-500">
+                <td class="px-1 py-3">01</td>
+                <td class="px-1 py-3">02</td>
+                <td class="px-1 py-3"><a href="">06</a></td>
+                <td class="px-1 py-3"><a href="">بی ام و سری i</a></td>
+                <td class="px-1 py-3">بهرام حلیمی</td>
+                <td class="px-1 py-3">09050447589</td>
+                <td class="px-1 py-3">10000000</td>
+                <td class="px-1 py-3">1403/2/1-20:22</td>
+            </tr>
+        </table>
+    </div>
 
 
 
 
     <script src="js/dark-light-handler.js"></script>
+    <script src="js/panel.js"></script>
 </body>
 </html>

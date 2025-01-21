@@ -81,4 +81,10 @@
       .panel-nav--active{
         @apply text-textColor dark:text-darkTextColor border-b border-textColor dark:border-darkTextColor
       }
+      .customScrollX::-webkit-scrollbar{
+        @apply bg-surface-300 dark:bg-darksurface-500 h-1
+      }
+      .customScrollX::-webkit-scrollbar-thumb{
+        @apply bg-surface-500 dark:bg-darksurface-300
+      }
 }
