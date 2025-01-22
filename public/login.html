@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style/toastify.css">
     <link rel="stylesheet" href="style/output.css">
 </head>
 <body class="bg-background dark:bg-darkBackground min-h-screen flex justify-center items-start flex-col">
@@ -30,7 +31,21 @@
             <button type="submit" class="border border-textColor dark:border-darkTextColor rounded-md w-full py-1 text-center hover:bg-textColor dark:hover:bg-darkTextColor hover:text-background dark:hover:text-darkBackground transition-all duration-200">ورود به حساب کاربری</button>
         </form>
     </div>
-
+    <script src="js/toastify.js"></script>
+    <script>
+        Toastify({
+            text: "هیشیی نگووو",
+            duration: 3000,
+            newWindow: true,
+            gravity: "top", // `top` or `bottom`
+            position: "right", // `left`, `center` or `right`
+            stopOnFocus: true, // Prevents dismissing of toast on hover
+            style: {
+                background: "linear-gradient(to right, #4CAF50, #66bb6a)",
+            },
+            onClick: function(){} // Callback after click
+        }).showToast();
+    </script>
     <script src="js/dark-light-handler.js"></script>
 </body>
 </html>
