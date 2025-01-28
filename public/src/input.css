@@ -87,4 +87,7 @@
       .customScrollX::-webkit-scrollbar-thumb{
         @apply bg-surface-500 dark:bg-darksurface-300
       }
+      .filter-radio:checked ~ .filter-radio-label{
+        @apply bg-primary
+      }
 }

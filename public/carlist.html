@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>cartac</title>
     <link rel="stylesheet" href="style/output.css">
+    <link rel="stylesheet" href="style/nouislider.css">
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/wNumb.min.js"></script>
 </head>
 <body class="bg-background dark:bg-darkBackground min-h-screen overflow-x-hidden">
     <svg class="hidden">
@@ -41,10 +44,50 @@
     <div class="mb-24"></div>
 
     <section class="container grid grid-cols-1 md:grid-cols-12 relative z-10">
-        <div id="filterSection" class="w-full h-full hidden md:block col-span-4 lg:col-span-3 pl-4 lg:pl-0 text-textColor dark:text-darkTextColor border-l border-textColor/20 dark:border-darkTextColor/20 pt-2">
-            <div class="flex gap-2">
+        <div id="filterSection" class="w-full h-full hidden md:block col-span-4 lg:col-span-3 pl-4 lg:pl-0 text-textColor dark:text-darkTextColor border-l border-textColor/20 dark:border-darkTextColor/20 pt-2 ">
+            <div class="flex gap-2 mb-6">
                 <svg class="w-8 h-8"><use href="#filter-icon"></use></svg>
-                <span>فیلتر ها</span>
+                <span class=" block">فیلتر ها</span>
+            </div>
+            <!-- range input -->
+            <div class="space-y-2 mx-4">
+                <div class="slider-styled" id="slider-round"></div>
+                <div class="flex justify-between">
+                    <div>
+                        <span>از</span>
+                        <span id="slider-snap-value-lower" class="text-sm"></span>
+                    </div>
+                    <div>
+                        <span>تا</span>
+                        <span id="slider-snap-value-upper" class="text-sm"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- brand dropdown -->
+            <div class="bg-surface-500 dark:bg-darksurface-500 mx-4 p-2 rounded">
+                <!-- dropdownBtn -->
+                <div class="flex justify-between items-center">
+                    <span>انتخاب برند</span>
+                    <svg class="w-6 h-6"><use href="#chevron-down-icon"></use></svg>
+                </div>
+                <!-- dropDown content -->
+                <div class="flex flex-col gap-1">
+                    <div class="flex gap-1 items-center">
+                        <input type="checkbox" name="" id="saipa-radio" class="filter-radio hidden">
+                        <label for="saipa-radio" class="filter-radio-label transition-all duration-75 w-4 h-4 rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                        <span>سایپا</span>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <input type="checkbox" name="" id="bmw-radio" class="filter-radio hidden">
+                        <label for="bmw-radio" class="filter-radio-label transition-all duration-75 w-4 h-4 rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                        <span>بی ام و</span>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <input type="checkbox" name="" id="iran-khodro-radio" class="filter-radio hidden">
+                        <label for="iran-khodro-radio" class="filter-radio-label transition-all duration-75 w-4 h-4 rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                        <span>ایران خودرو</span>
+                    </div>
+                </div> 
             </div>
         </div>
         <div id="searchSection" class="md:col-span-8 md:col-start-5 lg:col-span-9 lg:col-start-4 relative">
@@ -501,6 +544,48 @@
     <!-- fade line -->
     <!-- <div class="absolute top-0 right-0 hidden lg:block w-[800px] h-[400px] bg-gradient-to-bl from-primary/60 via-primary/30 to-transparent blur-xl z-0"></div> -->
     <!-- <div class="absolute top-1/2 right-0 hidden lg:block w-[800px] h-14 rotate-[5deg] bg-primary/20 blur-xl z-0"></div> -->
+    <script>
+        var slider = document.getElementById('slider-round');
+        // var valuesForSlider = ['100میلیون','200میلیون','300میلیون','400میلیون','500میلیون','600میلیون','700میلیون','800میلیون','900میلیون','1ملیارد','2میلیارد','3میلیارد','4میلیارد','5میلیارد','8میلیارد','12میلیارد','18میلیارد','20میلیارد','25میلیارد','30 ملیارد'];
+
+        // var format = {
+        //     to: function(value) {
+        //         return valuesForSlider[Math.round(value)];
+        //     },
+        //     from: function (value) {
+        //         return valuesForSlider.indexOf(Number(value));
+        //     }
+        // };
+        var moneyFormat = wNumb({
+            thousand: ',',
+            suffix: 'تومان ',
+            decimals:0,
+        });
+
+        noUiSlider.create(slider, {
+            start: [0,25000000000],
+            snap: false,
+            connect: true,
+            range: {
+                'min': 100000000,
+                '10%': [100000000,100000000],
+                '30%': [1000000000,200000000],
+                '50%': [10000000000,4000000000],
+                'max': 25000000000
+            },
+            format:moneyFormat,
+            tooltips: false,
+            direction: 'rtl',
+        });
+        var snapValues = [
+            document.getElementById('slider-snap-value-lower'),
+            document.getElementById('slider-snap-value-upper')
+        ];
+
+        slider.noUiSlider.on('update', function (values, handle) {
+            snapValues[handle].innerHTML = values[handle];
+        });
+    </script>
     <script src="js/dark-light-handler.js"></script>
     <script src="js/carlist.js"></script>
 </body>

@@ -752,6 +752,11 @@ body{
   background-color: rgb(87 87 87 / var(--tw-bg-opacity, 1));
 }
 
+.filter-radio:checked ~ .filter-radio-label {
+  --tw-bg-opacity: 1;
+  background-color: rgb(76 175 80 / var(--tw-bg-opacity, 1));
+}
+
 .visible {
   visibility: visible;
 }
@@ -1003,6 +1008,10 @@ body{
 
 .mb-5 {
   margin-bottom: 1.25rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
 }
 
 .mb-7 {
@@ -1872,10 +1881,6 @@ body{
   border-color: rgb(87 83 78 / var(--tw-border-opacity, 1));
 }
 
-.border-transparent {
-  border-color: transparent;
-}
-
 .bg-\[\#686B75\] {
   --tw-bg-opacity: 1;
   background-color: rgb(104 107 117 / var(--tw-bg-opacity, 1));
@@ -2550,6 +2555,18 @@ body{
 
 .duration-500 {
   transition-duration: 500ms;
+}
+
+.duration-150 {
+  transition-duration: 150ms;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-75 {
+  transition-duration: 75ms;
 }
 
 .before\:absolute::before {
