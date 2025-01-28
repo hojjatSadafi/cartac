@@ -5,7 +5,12 @@ const dropDownBody = document.getElementById('filterDropdownBody')
 const toggleFilterBtn = document.getElementById('toggleFilterBtn')
 const filterSection = document.getElementById('filterSection')
 const searchSection = document.getElementById('searchSection')
+
+const brandDropdownBtn = document.getElementById('brand-dropdown-btn')
+const brandDropdownContent = document.getElementById('brand-dropdown-content')
+
 // funcs
+
 let toggleFilterSection = ()=>{
     filterSection.classList.toggle('!hidden')
     searchSection.classList.toggle('!col-span-full')
@@ -25,10 +30,13 @@ dropDownBody.addEventListener('click',event=>{
         dropDownBody.classList.add('hide')
         dropDown.children[1].classList.remove('rotate-180')
     }
-    
 })
 
 toggleFilterBtn.addEventListener('click',()=>{
     toggleFilterSection()
 })
 
+brandDropdownBtn.addEventListener('click',()=>{
+    brandDropdownContent.classList.toggle('closed')
+    brandDropdownBtn.children[1].classList.toggle('rotate-180')
+})

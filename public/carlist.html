@@ -66,12 +66,42 @@
             <!-- brand dropdown -->
             <div class="bg-surface-500 dark:bg-darksurface-500 mx-4 p-2 rounded">
                 <!-- dropdownBtn -->
-                <div class="flex justify-between items-center">
+                <div class="flex justify-between items-center select-none" id="brand-dropdown-btn">
                     <span>انتخاب برند</span>
-                    <svg class="w-6 h-6"><use href="#chevron-down-icon"></use></svg>
+                    <svg class="w-6 h-6 transition-all duration-200"><use href="#chevron-down-icon"></use></svg>
                 </div>
                 <!-- dropDown content -->
-                <div class="flex flex-col gap-1">
+                <div class="flex flex-col gap-1 max-h-8 overflow-y-auto closed transition-all duration-200" id="brand-dropdown-content">
+                    <div class="flex gap-1 items-center">
+                        <input type="checkbox" name="" id="saipa-radio" class="filter-radio hidden">
+                        <label for="saipa-radio" class="filter-radio-label transition-all duration-75 w-4 h-4 rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                        <span>سایپا</span>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <input type="checkbox" name="" id="bmw-radio" class="filter-radio hidden">
+                        <label for="bmw-radio" class="filter-radio-label transition-all duration-75 w-4 h-4 rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                        <span>بی ام و</span>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <input type="checkbox" name="" id="iran-khodro-radio" class="filter-radio hidden">
+                        <label for="iran-khodro-radio" class="filter-radio-label transition-all duration-75 w-4 h-4 rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                        <span>ایران خودرو</span>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <input type="checkbox" name="" id="saipa-radio" class="filter-radio hidden">
+                        <label for="saipa-radio" class="filter-radio-label transition-all duration-75 w-4 h-4 rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                        <span>سایپا</span>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <input type="checkbox" name="" id="bmw-radio" class="filter-radio hidden">
+                        <label for="bmw-radio" class="filter-radio-label transition-all duration-75 w-4 h-4 rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                        <span>بی ام و</span>
+                    </div>
+                    <div class="flex gap-1 items-center">
+                        <input type="checkbox" name="" id="iran-khodro-radio" class="filter-radio hidden">
+                        <label for="iran-khodro-radio" class="filter-radio-label transition-all duration-75 w-4 h-4 rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                        <span>ایران خودرو</span>
+                    </div>
                     <div class="flex gap-1 items-center">
                         <input type="checkbox" name="" id="saipa-radio" class="filter-radio hidden">
                         <label for="saipa-radio" class="filter-radio-label transition-all duration-75 w-4 h-4 rounded bg-surface-300 dark:bg-darksurface-300"></label>
