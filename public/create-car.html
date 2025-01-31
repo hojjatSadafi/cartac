@@ -16,36 +16,393 @@
         </symbol>
         <symbol id="arrow-uturn-left-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3" />
-        </symbol>          
+        </symbol>
+        <symbol id="check-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+        </symbol>
     </svg>
-    <form class="container text-textColor dark:text-darkTextColor pt-20 space-y-4 flex flex-col items-center">
-        <!-- primary image -->
-        <div class="w-full max-w-96 min-h-20 rounded-lg overflow-hidden mx-auto relative cursor-pointer border border-textColor dark:border-darkTextColor" >
-            <img src="" alt="" class="w-full relative z-40" id="primary-image-elem">
+    <form class="container text-textColor dark:text-darkTextColor pt-20 space-y-4 flex flex-col items-center overflow-x-hidden">
+        
+        <!-- images -->
+        <div class="md:flex justify-around w-full border-2 border-surface-500 dark:border-darksurface-500 rounded-2xl">
             
-            <input type="file" name="" id="primary-image-input" class="hidden">
-            <label for="primary-image-input" class="block absolute inset-0 m-auto z-50 bg-transparent cursor-pointer" title="برای آپلود عکس کلیک کنید"></label>
-            
-            <div class="absolute inset-0 m-auto flex justify-center items-center flex-col z-10">
-                <svg class="block w-8 h-8 shrink-0"><use href="#image-icon"></use></svg>
-                <p>عکس اصلی را آپلود کنید</p>
+                <div class="w-full max-w-96 min-h-20 rounded-lg overflow-hidden relative cursor-pointer border border-textColor dark:border-darkTextColor" >
+                    <img src="" alt="" class="w-full relative z-40" id="primary-image-elem">
+                    
+                    <input type="file" name="" id="primary-image-input" class="hidden">
+                    <label for="primary-image-input" class="block absolute inset-0 m-auto z-50 bg-transparent cursor-pointer" title="برای آپلود عکس کلیک کنید"></label>
+                    
+                    <div class="absolute inset-0 m-auto flex justify-center items-center flex-col z-10">
+                        <svg class="block w-8 h-8 shrink-0"><use href="#image-icon"></use></svg>
+                        <p>عکس اصلی را آپلود کنید</p>
+                    </div>
+                </div>
+    
+            <div class="shrink-0 pr-2 md:border-r-2 border-surface-500 dark:border-darksurface-500 py-5">
+                <!-- secendry images -->
+                <h3 class="text-lg">عکس های فرعی را آپلود کنید</h3>
+                <input type="file" name="" id="" class="block mx-auto" multiple>
+                
+                 <!-- divider -->
+                <div class="w-full h-0.5 bg-surface-500 dark:bg-darksurface-500 my-4"></div>
+        
+
+                <!-- defect images -->
+                <h3 class="text-lg">عکس های عیب های ماشین را آپلود کنید</h3>
+                <input type="file" name="" id="" class="block mx-auto" multiple>
             </div>
         </div>
+        <!-- boxes -->
+        <div class="flex gap-6 flex-wrap justify-center">
+            <!-- card -->
+            <div class=" p-2 border border-surface-500 dark:border-darksurface-500 space-y-2">
+                <h3 class="text-lg text-center">موتور</h3>
+                <div class="flex gap-2">
+                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                        </div>
+                    
+                        <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                            <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                        </div>
+                </div>
 
-        <!-- divider -->
-        <div class="w-full h-0.5 bg-surface-500 dark:bg-darksurface-500"></div>
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname" id="motor1" class="filter-radio hidden" checked>
+                        <label for="motor1" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname" id="motor2" class="filter-radio hidden">
+                        <label for="motor2" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname2" id="motor3" class="filter-radio hidden" checked>
+                        <label for="motor3" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname2" id="motor4" class="filter-radio hidden">
+                        <label for="motor4" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname3" id="motor5" class="filter-radio hidden" checked>
+                        <label for="motor5" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname3" id="motor6" class="filter-radio hidden">
+                        <label for="motor6" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname4" id="motor7" class="filter-radio hidden" checked>
+                        <label for="motor7" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname4" id="motor8" class="filter-radio hidden">
+                        <label for="motor8" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname5" id="motor9" class="filter-radio hidden" checked>
+                        <label for="motor9" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname5" id="motor10" class="filter-radio hidden">
+                        <label for="motor10" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+            </div>
 
-        <!-- secendry images -->
-        <h3 class="text-lg">عکس های فرعی را آپلود کنید</h3>
-        <input type="file" name="" id="" class="block mx-auto" multiple>
+            <div class=" p-2 border border-surface-500 dark:border-darksurface-500 space-y-2">
+                <h3 class="text-lg text-center">موتور</h3>
+                <div class="flex gap-2">
+                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                        </div>
+                    
+                        <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                            <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                        </div>
+                </div>
 
-        <!-- divider -->
-        <div class="w-full h-0.5 bg-surface-500 dark:bg-darksurface-500"></div>
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname2." id="motor2.1" class="filter-radio hidden" checked>
+                        <label for="motor2.1" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname2." id="motor2.2" class="filter-radio hidden">
+                        <label for="motor2.2" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی سلامت کامل شاسی سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname2.2" id="motor2.3" class="filter-radio hidden" checked>
+                        <label for="motor2.3" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname2.2" id="motor2.4" class="filter-radio hidden">
+                        <label for="motor2.4" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname2.3" id="motor2.5" class="filter-radio hidden" checked>
+                        <label for="motor2.5" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname2.3" id="motor2.6" class="filter-radio hidden">
+                        <label for="motor2.6" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname2.4" id="motor2.7" class="filter-radio hidden" checked>
+                        <label for="motor2.7" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname2.4" id="motor2.8" class="filter-radio hidden">
+                        <label for="motor2.8" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname2.5" id="motor2.9" class="filter-radio hidden" checked>
+                        <label for="motor2.9" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname2.5" id="motor2.10" class="filter-radio hidden">
+                        <label for="motor2.10" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+            </div>
 
-        <!-- defect images -->
-        <h3 class="text-lg">عکس های عیب های ماشین را آپلود کنید</h3>
-        <input type="file" name="" id="" class="block mx-auto" multiple>
-        
+            <div class=" p-2 border border-surface-500 dark:border-darksurface-500 space-y-2">
+                <h3 class="text-lg text-center">موتور</h3>
+                <div class="flex gap-2">
+                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                        </div>
+                    
+                        <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                            <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                        </div>
+                </div>
+
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname3." id="motor3.1" class="filter-radio hidden" checked>
+                        <label for="motor3.1" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname3." id="motor3.2" class="filter-radio hidden">
+                        <label for="motor3.2" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname3.2" id="motor3.3" class="filter-radio hidden" checked>
+                        <label for="motor3.3" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname3.2" id="motor3.4" class="filter-radio hidden">
+                        <label for="motor3.4" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname3.3" id="motor3.5" class="filter-radio hidden" checked>
+                        <label for="motor3.5" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname3.3" id="motor3.6" class="filter-radio hidden">
+                        <label for="motor3.6" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname3.4" id="motor3.7" class="filter-radio hidden" checked>
+                        <label for="motor3.7" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname3.4" id="motor3.8" class="filter-radio hidden">
+                        <label for="motor3.8" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname3.5" id="motor3.9" class="filter-radio hidden" checked>
+                        <label for="motor3.9" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname3.5" id="motor3.10" class="filter-radio hidden">
+                        <label for="motor3.10" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+            </div>
+
+            <div class=" p-2 border border-surface-500 dark:border-darksurface-500 space-y-2">
+                <h3 class="text-lg text-center">موتور</h3>
+                <div class="flex gap-2">
+                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                        </div>
+                    
+                        <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                            <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                        </div>
+                </div>
+
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname4." id="motor4.1" class="filter-radio hidden" checked>
+                        <label for="motor4.1" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname4." id="motor4.2" class="filter-radio hidden">
+                        <label for="motor4.2" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname4.2" id="motor4.3" class="filter-radio hidden" checked>
+                        <label for="motor4.3" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname4.2" id="motor4.4" class="filter-radio hidden">
+                        <label for="motor4.4" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname4.3" id="motor4.5" class="filter-radio hidden" checked>
+                        <label for="motor4.5" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname4.3" id="motor4.6" class="filter-radio hidden">
+                        <label for="motor4.6" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname4.4" id="motor4.7" class="filter-radio hidden" checked>
+                        <label for="motor4.7" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname4.4" id="motor4.8" class="filter-radio hidden">
+                        <label for="motor4.8" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname4.5" id="motor4.9" class="filter-radio hidden" checked>
+                        <label for="motor4.9" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname4.5" id="motor4.10" class="filter-radio hidden">
+                        <label for="motor4.10" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+            </div>
+
+            <div class=" p-2 border border-surface-500 dark:border-darksurface-500 space-y-2">
+                <h3 class="text-lg text-center">موتور</h3>
+                <div class="flex gap-2">
+                        <div class="text-green-500 bg-green-100 dark:bg-green-950 rounded-full flex items-center justify-center p-px">
+                            <svg class="w-4 h-4"><use href="#check-icon"></use></svg>
+                        </div>
+                    
+                        <div class="text-red-500 bg-red-100 dark:bg-red-950 rounded-full flex items-center justify-center p-px">
+                            <svg class="w-4 h-4"><use href="#x-icon"></use></svg>
+                        </div>
+                </div>
+
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname5." id="motor5.1" class="filter-radio hidden" checked>
+                        <label for="motor5.1" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname5." id="motor5.2" class="filter-radio hidden">
+                        <label for="motor5.2" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname5.2" id="motor5.3" class="filter-radio hidden" checked>
+                        <label for="motor5.3" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname5.2" id="motor5.4" class="filter-radio hidden">
+                        <label for="motor5.4" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname5.3" id="motor5.5" class="filter-radio hidden" checked>
+                        <label for="motor5.5" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname5.3" id="motor5.6" class="filter-radio hidden">
+                        <label for="motor5.6" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname5.4" id="motor5.7" class="filter-radio hidden" checked>
+                        <label for="motor5.7" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname5.4" id="motor5.8" class="filter-radio hidden">
+                        <label for="motor5.8" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+                <div class="flex gap-2">
+                    <div class="flex">
+                        <input type="radio" name="radioname5.5" id="motor5.9" class="filter-radio hidden" checked>
+                        <label for="motor5.9" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <div class="flex">  
+                        <input type="radio" name="radioname5.5" id="motor5.10" class="filter-radio hidden">
+                        <label for="motor5.10" class="filter-radio-label transition-all duration-75 w-[18px] h-[18px] rounded bg-surface-300 dark:bg-darksurface-300"></label>
+                    </div>
+                    <span class="text-sm max-w-40">سلامت کامل شاسی</span>
+                </div>    
+            </div>
+
+
+        </div>
+
         <!-- divider -->
         <div class="w-full h-0.5 bg-surface-500 dark:bg-darksurface-500"></div>
         
