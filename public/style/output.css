@@ -1248,6 +1248,10 @@ body{
   height: 1px;
 }
 
+.h-\[70px\] {
+  height: 70px;
+}
+
 .max-h-40 {
   max-height: 10rem;
 }
